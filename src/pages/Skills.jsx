@@ -155,29 +155,32 @@ const Skills = () => {
         </div>
 
         {/* Skills Section */}
-        <div id="skills" className="border-t-2 border-white/20 scroll-mt-32 relative bg-black/40 backdrop-blur-sm">
+        <div id="skills" className="border-t-2 border-white/20 scroll-mt-32 relative bg-white">
           <div className="max-w-7xl mx-auto p-8 md:p-16 relative z-10">
             <div className="text-center mb-16">
-              <p className="text-cyan-400 font-mono text-sm mb-2">$ npm run show-skills</p>
-              <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-cyan-400 font-mono">
+              <p className="text-gray-500 font-mono text-sm mb-2">$ npm run show-skills</p>
+              <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-black font-mono">
                 &gt; SKILLS_MATRIX
               </h1>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-12 md:gap-16 mb-16">
+            <div className="grid md:grid-cols-2 gap-12">
               {/* Marketing Skills */}
               <div>
-                <h2 className="text-2xl md:text-3xl font-black uppercase mb-8">Marketing</h2>
+                <div className="mb-6">
+                  <h2 className="text-3xl font-black uppercase text-black mb-2">Marketing</h2>
+                  <div className="h-1 w-20 bg-cyan-400"></div>
+                </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {marketingSkills.map((skill, idx) => (
                     <div
                       key={idx}
-                      className="text-sm font-semibold border border-black p-3 relative group cursor-help"
+                      className="text-sm font-semibold text-black bg-gray-50 p-3 relative group cursor-help border border-gray-200 hover:border-cyan-400 hover:shadow-md transition-all"
                     >
                       {skill.name}
-                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-white border-2 border-black text-xs font-normal leading-relaxed w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10 shadow-lg">
+                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-4 py-3 bg-white text-slate-900 text-xs font-normal leading-relaxed w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10 shadow-xl rounded-lg border border-gray-200">
                         {skill.description}
-                        <div className="absolute top-full left-1/2 transform -translate-x-1/2 -mt-[2px] w-0 h-0 border-l-8 border-r-8 border-t-8 border-l-transparent border-r-transparent border-t-black"></div>
+                        <div className="absolute top-full left-1/2 transform -translate-x-1/2 -mt-1 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-gray-200"></div>
                       </div>
                     </div>
                   ))}
@@ -186,17 +189,20 @@ const Skills = () => {
 
               {/* Engineering Skills */}
               <div>
-                <h2 className="text-2xl md:text-3xl font-black uppercase mb-8">Engineer</h2>
+                <div className="mb-6">
+                  <h2 className="text-3xl font-black uppercase text-black mb-2">Engineer</h2>
+                  <div className="h-1 w-20 bg-purple-400"></div>
+                </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {engineeringSkills.map((skill, idx) => (
                     <div
                       key={idx}
-                      className="text-sm font-semibold border border-black p-3 relative group cursor-help"
+                      className="text-sm font-semibold text-black bg-gray-50 p-3 relative group cursor-help border border-gray-200 hover:border-purple-400 hover:shadow-md transition-all"
                     >
                       {skill.name}
-                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-white border-2 border-black text-xs font-normal leading-relaxed w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10 shadow-lg">
+                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-4 py-3 bg-white text-slate-900 text-xs font-normal leading-relaxed w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10 shadow-xl rounded-lg border border-gray-200">
                         {skill.description}
-                        <div className="absolute top-full left-1/2 transform -translate-x-1/2 -mt-[2px] w-0 h-0 border-l-8 border-r-8 border-t-8 border-l-transparent border-r-transparent border-t-black"></div>
+                        <div className="absolute top-full left-1/2 transform -translate-x-1/2 -mt-1 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-gray-200"></div>
                       </div>
                     </div>
                   ))}
@@ -207,7 +213,7 @@ const Skills = () => {
         </div>
 
         {/* Examples Section */}
-        <div id="examples" className="border-t-2 border-white/20 bg-gray-900/70 backdrop-blur-sm scroll-mt-32 relative">
+        <div id="examples" className="border-t-2 border-white/20 bg-gray-900 scroll-mt-32 relative">
           <div className="max-w-7xl mx-auto p-8 md:p-16 relative z-10">
             <div className="text-center mb-12">
               <p className="text-purple-400 font-mono text-sm mb-2">$ ls examples/</p>
@@ -216,120 +222,150 @@ const Skills = () => {
               </h1>
             </div>
 
-            <div className="space-y-12">
+            <div className="space-y-8">
               {/* Marketing Ethos and Approach */}
-              <div>
-                <h2 className="text-2xl md:text-3xl font-black uppercase mb-4 text-green-400 font-mono">
-                  $ Marketing Ethos and Approach
-                </h2>
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  These resources highlight how I think about marketing at both a strategic and executional level, from frameworks to audience insights to campaign delivery.
-                </p>
-                <ul className="space-y-3">
-                  <li>
-                    <span className="font-bold">Marketing Strategy Framework:</span>{' '}
-                    <a href="https://drive.google.com/file/d/199U6xyWPFRc_9UktHUppsMcPPpajIR0Y/view" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">
-                      https://drive.google.com/file/d/199U6xyWPFRc_9UktHUppsMcPPpajIR0Y/view
-                    </a>
-                  </li>
-                  <li>
-                    <span className="font-bold">Audience Analysis via Personas:</span>{' '}
-                    <a href="https://drive.google.com/file/d/1m6KxuASL-IeH0zTSA7Jqwp4LiIT1J6M-/view" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">
-                      https://drive.google.com/file/d/1m6KxuASL-IeH0zTSA7Jqwp4LiIT1J6M-/view
-                    </a>
-                  </li>
-                  <li>
-                    <span className="font-bold">Campaign Case Study (from ideation to execution):</span>{' '}
-                    <a href="https://nicole-ems-case-study.netlify.app/" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">
-                      https://nicole-ems-case-study.netlify.app/
-                    </a>
-                  </li>
-                  <li>
-                    <span className="font-bold">Strategic Marketing Pitch Deck:</span>{' '}
-                    <a href="https://drive.google.com/file/d/1Sc9TXDro75YD48HGL4c4YKUR1GbcuXon/view" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">
-                      https://drive.google.com/file/d/1Sc9TXDro75YD48HGL4c4YKUR1GbcuXon/view
-                    </a>
-                  </li>
-                </ul>
+              <div className="bg-black border-2 border-white/20">
+                <div className="flex items-center gap-3 px-4 py-3 border-b border-white/20">
+                  <div className="flex gap-1.5">
+                    <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                  </div>
+                  <span className="text-xs text-white/60 font-mono">strategy@examples ~ %</span>
+                </div>
+                <div className="p-6">
+                  <h2 className="text-xl md:text-2xl font-black uppercase mb-4 text-green-400 font-mono">
+                    $ cat marketing_ethos.txt
+                  </h2>
+                  <p className="text-gray-300 mb-6 leading-relaxed text-sm">
+                    These resources highlight how I think about marketing at both a strategic and executional level, from frameworks to audience insights to campaign delivery.
+                  </p>
+                  <ul className="space-y-3">
+                    <li>
+                      <span className="font-bold text-white font-mono text-sm">Marketing Strategy Framework:</span>{' '}
+                      <a href="https://drive.google.com/file/d/199U6xyWPFRc_9UktHUppsMcPPpajIR0Y/view" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs">
+                        https://drive.google.com/file/d/199U6xyWPFRc_9UktHUppsMcPPpajIR0Y/view
+                      </a>
+                    </li>
+                    <li>
+                      <span className="font-bold text-white font-mono text-sm">Audience Analysis via Personas:</span>{' '}
+                      <a href="https://drive.google.com/file/d/1m6KxuASL-IeH0zTSA7Jqwp4LiIT1J6M-/view" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs">
+                        https://drive.google.com/file/d/1m6KxuASL-IeH0zTSA7Jqwp4LiIT1J6M-/view
+                      </a>
+                    </li>
+                    <li>
+                      <span className="font-bold text-white font-mono text-sm">Campaign Case Study (from ideation to execution):</span>{' '}
+                      <a href="https://nicole-ems-case-study.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs">
+                        https://nicole-ems-case-study.netlify.app/
+                      </a>
+                    </li>
+                    <li>
+                      <span className="font-bold text-white font-mono text-sm">Strategic Marketing Pitch Deck:</span>{' '}
+                      <a href="https://drive.google.com/file/d/1Sc9TXDro75YD48HGL4c4YKUR1GbcuXon/view" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs">
+                        https://drive.google.com/file/d/1Sc9TXDro75YD48HGL4c4YKUR1GbcuXon/view
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
 
               {/* Writing and Content Samples */}
-              <div>
-                <h2 className="text-2xl md:text-3xl font-black uppercase mb-4 text-cyan-400 font-mono">
-                  $ Writing and Content Samples
-                </h2>
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  To give you a sense of my writing style and approach to marketing communication, here are a few examples of my published work:
-                </p>
-                <ul className="space-y-3">
-                  <li>
-                    <span className="font-bold">LinkedIn Article:</span>{' '}
-                    <a href="https://www.linkedin.com/pulse/marketers-business-leaders-ai-survival-guide-nicole-choman/" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600 break-all">
-                      https://www.linkedin.com/pulse/marketers-business-leaders-ai-survival-guide-nicole-choman/
-                    </a>
-                  </li>
-                  <li>
-                  <span className="font-bold">Blog Post:</span>{' '}
-                    <a href="https://marketingcar.com/blog/5-quick-ways-to-improve-small-business-marketing" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600 break-all">
-                      https://marketingcar.com/blog/5-quick-ways-to-improve-small-business-marketing
-                    </a>
-                  </li>
-                  <li>
-                    <span className="font-bold">Book (Bad Marketing):</span>{' '}
-                    <a href="https://drive.google.com/file/d/14SY2auY_oBeguLB1eg24ruzsFeUZx4GA/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600 break-all">
-                      https://drive.google.com/file/d/14SY2auY_oBeguLB1eg24ruzsFeUZx4GA/view
-                    </a>
-                  </li>
-                  <li>
-                    <span className="font-bold">Strategic Marketing Pitch Deck:</span>{' '}
-                    <a href="https://drive.google.com/file/d/1Sc9TXDro75YD48HGL4c4YKUR1GbcuXon/view" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">
-                      https://drive.google.com/file/d/1Sc9TXDro75YD48HGL4c4YKUR1GbcuXon/view
-                    </a>
-                  </li>
-                </ul>
+              <div className="bg-black border-2 border-white/20">
+                <div className="flex items-center gap-3 px-4 py-3 border-b border-white/20">
+                  <div className="flex gap-1.5">
+                    <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                  </div>
+                  <span className="text-xs text-white/60 font-mono">content@examples ~ %</span>
+                </div>
+                <div className="p-6">
+                  <h2 className="text-xl md:text-2xl font-black uppercase mb-4 text-cyan-400 font-mono">
+                    $ cat writing_samples.txt
+                  </h2>
+                  <p className="text-gray-300 mb-6 leading-relaxed text-sm">
+                    To give you a sense of my writing style and approach to marketing communication, here are a few examples of my published work:
+                  </p>
+                  <ul className="space-y-3">
+                    <li>
+                      <span className="font-bold text-white font-mono text-sm">LinkedIn Article:</span>{' '}
+                      <a href="https://www.linkedin.com/pulse/marketers-business-leaders-ai-survival-guide-nicole-choman/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs break-all">
+                        https://www.linkedin.com/pulse/marketers-business-leaders-ai-survival-guide-nicole-choman/
+                      </a>
+                    </li>
+                    <li>
+                    <span className="font-bold text-white font-mono text-sm">Blog Post:</span>{' '}
+                      <a href="https://marketingcar.com/blog/5-quick-ways-to-improve-small-business-marketing" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs break-all">
+                        https://marketingcar.com/blog/5-quick-ways-to-improve-small-business-marketing
+                      </a>
+                    </li>
+                    <li>
+                      <span className="font-bold text-white font-mono text-sm">Book (Bad Marketing):</span>{' '}
+                      <a href="https://drive.google.com/file/d/14SY2auY_oBeguLB1eg24ruzsFeUZx4GA/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs break-all">
+                        https://drive.google.com/file/d/14SY2auY_oBeguLB1eg24ruzsFeUZx4GA/view
+                      </a>
+                    </li>
+                    <li>
+                      <span className="font-bold text-white font-mono text-sm">Strategic Marketing Pitch Deck:</span>{' '}
+                      <a href="https://drive.google.com/file/d/1Sc9TXDro75YD48HGL4c4YKUR1GbcuXon/view" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs">
+                        https://drive.google.com/file/d/1Sc9TXDro75YD48HGL4c4YKUR1GbcuXon/view
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
 
               {/* Branding and Design Work */}
-              <div>
-                <h2 className="text-2xl md:text-3xl font-black uppercase mb-4 text-yellow-400 font-mono">
-                  $ Branding and Design Work
-                </h2>
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  These projects showcase my ability to create cohesive brand identities that align with strategy and audience.
-                </p>
-                <ul className="space-y-3 mb-6">
-                  <li>
-                    <span className="font-bold">Brand Design Example (Seerist):</span>{' '}
-                    <a href="https://www.figma.com/design/jDTC2AOUgTQviVDbIseF3J/Seerist?node-id=0-1&p=f" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">
-                      https://www.figma.com/design/jDTC2AOUgTQviVDbIseF3J/Seerist?node-id=0-1&p=f
+              <div className="bg-black border-2 border-white/20">
+                <div className="flex items-center gap-3 px-4 py-3 border-b border-white/20">
+                  <div className="flex gap-1.5">
+                    <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                  </div>
+                  <span className="text-xs text-white/60 font-mono">design@examples ~ %</span>
+                </div>
+                <div className="p-6">
+                  <h2 className="text-xl md:text-2xl font-black uppercase mb-4 text-yellow-400 font-mono">
+                    $ ls -la branding_work/
+                  </h2>
+                  <p className="text-gray-300 mb-6 leading-relaxed text-sm">
+                    These projects showcase my ability to create cohesive brand identities that align with strategy and audience.
+                  </p>
+                  <ul className="space-y-3 mb-8">
+                    <li>
+                      <span className="font-bold text-white font-mono text-sm">Brand Design Example (Seerist):</span>{' '}
+                      <a href="https://www.figma.com/design/jDTC2AOUgTQviVDbIseF3J/Seerist?node-id=0-1&p=f" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs">
+                        https://www.figma.com/design/jDTC2AOUgTQviVDbIseF3J/Seerist?node-id=0-1&p=f
+                      </a>
+                    </li>
+                    <li>
+                      <span className="font-bold text-white font-mono text-sm">Brand Design Example (Basic Instructions):</span>{' '}
+                      <a href="https://xd.adobe.com/view/688f8407-8edb-48a6-8206-5d9040dd6e7c-3ddc/?hints=off" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs">
+                        https://xd.adobe.com/view/688f8407-8edb-48a6-8206-5d9040dd6e7c-3ddc/?hints=off
+                      </a>
+                    </li>
+                  </ul>
+                  <h3 className="text-lg md:text-xl font-black uppercase mb-4 text-orange-400 font-mono">
+                    $ cat site_examples.txt
+                  </h3>
+                  <div className="flex flex-wrap gap-4">
+                    <a href="https://wtfareu.com" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs">
+                      wtfareu.com
                     </a>
-                  </li>
-                  <li>
-                    <span className="font-bold">Brand Design Example (Basic Instructions):</span>{' '}
-                    <a href="https://xd.adobe.com/view/688f8407-8edb-48a6-8206-5d9040dd6e7c-3ddc/?hints=off" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">
-                      https://xd.adobe.com/view/688f8407-8edb-48a6-8206-5d9040dd6e7c-3ddc/?hints=off
+                    <a href="https://oasishealthservices.com" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs">
+                      oasishealthservices.com
                     </a>
-                  </li>
-                </ul>
-                <h3 className="text-xl md:text-2xl font-black uppercase mb-4 mt-8 text-orange-400 font-mono">
-                  $ Site Examples
-                </h3>
-                <div className="flex flex-wrap gap-4">
-                  <a href="https://wtfareu.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">
-                    wtfareu.com
-                  </a>
-                  <a href="https://oasishealthservices.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">
-                    oasishealthservices.com
-                  </a>
-                  <a href="https://marketingcar.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">
-                    marketingcar.com
-                  </a>
-                  <a href="https://clarkcounselingandconsulting.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">
-                    clarkcounselingandconsulting.com
-                  </a>
-                  <a href="https://bxhealthtx.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">
-                    bxhealthtx.com
-                  </a>
+                    <a href="https://marketingcar.com" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs">
+                      marketingcar.com
+                    </a>
+                    <a href="https://clarkcounselingandconsulting.com" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs">
+                      clarkcounselingandconsulting.com
+                    </a>
+                    <a href="https://bxhealthtx.com" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs">
+                      bxhealthtx.com
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

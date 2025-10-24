@@ -41,15 +41,19 @@ const ProofCard = ({ caseStudy }) => {
 
       {isExpanded && (
         <div className="border-t-2 border-white/20 p-6 bg-white/5">
-          <div className="grid grid-cols-2 gap-4 text-sm mb-4">
-            <div>
-              <h4 className="font-bold mb-2 uppercase text-xs tracking-wide text-cyan-400 font-mono">$ Creative</h4>
-              <p className="text-gray-300 font-mono text-xs">{caseStudy.creative}</p>
-            </div>
-            <div>
-              <h4 className="font-bold mb-2 uppercase text-xs tracking-wide text-purple-400 font-mono">$ Technical</h4>
-              <p className="text-gray-300 font-mono text-xs">{caseStudy.technical}</p>
-            </div>
+          <div className={`${caseStudy.type === 'Hybrid' ? 'grid grid-cols-2 gap-4' : ''} text-sm mb-4`}>
+            {(caseStudy.type === 'Creative' || caseStudy.type === 'Hybrid') && (
+              <div>
+                <h4 className="font-bold mb-2 uppercase text-xs tracking-wide text-cyan-400 font-mono">$ Creative</h4>
+                <p className="text-gray-300 font-mono text-xs">{caseStudy.creative}</p>
+              </div>
+            )}
+            {(caseStudy.type === 'Technical' || caseStudy.type === 'Hybrid') && (
+              <div>
+                <h4 className="font-bold mb-2 uppercase text-xs tracking-wide text-purple-400 font-mono">$ Technical</h4>
+                <p className="text-gray-300 font-mono text-xs">{caseStudy.technical}</p>
+              </div>
+            )}
           </div>
           <div>
             <h4 className="font-bold mb-2 uppercase text-xs tracking-wide text-green-400 font-mono">$ Results</h4>
