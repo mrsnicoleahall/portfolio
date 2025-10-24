@@ -53,26 +53,42 @@ const Contact = () => {
   const handleSubmit = async () => {
     setIsSubmitting(true);
 
-    // Simulate submission delay
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    try {
+      // Submit to Formspree
+      const response = await fetch('https://formspree.io/f/xanprgel', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
 
-    // Save to localStorage
-    if (typeof window !== 'undefined' && window.localStorage) {
-      try {
-        const submissions = JSON.parse(localStorage.getItem('contactSubmissions') || '[]');
-        submissions.push({ ...formData, submittedAt: new Date().toISOString() });
-        localStorage.setItem('contactSubmissions', JSON.stringify(submissions));
-      } catch (error) {
-        console.error("Could not save to localStorage", error);
+      if (response.ok) {
+        // Save to localStorage as backup
+        if (typeof window !== 'undefined' && window.localStorage) {
+          try {
+            const submissions = JSON.parse(localStorage.getItem('contactSubmissions') || '[]');
+            submissions.push({ ...formData, submittedAt: new Date().toISOString() });
+            localStorage.setItem('contactSubmissions', JSON.stringify(submissions));
+          } catch (error) {
+            console.error("Could not save to localStorage", error);
+          }
+        }
+
+        alert('MESSAGE TRANSMITTED SUCCESSFULLY');
+
+        // Reset form
+        setFormData({ name: '', email: '', message: '' });
+        setStep(0);
+      } else {
+        alert('ERROR: TRANSMISSION FAILED - Please try again or use email');
       }
+    } catch (error) {
+      console.error('Submission error:', error);
+      alert('ERROR: CONNECTION FAILED - Please try again or use email');
+    } finally {
+      setIsSubmitting(false);
     }
-
-    alert('MESSAGE TRANSMITTED SUCCESSFULLY');
-
-    // Reset form
-    setFormData({ name: '', email: '', message: '' });
-    setStep(0);
-    setIsSubmitting(false);
   };
 
   return (
@@ -185,9 +201,10 @@ const Contact = () => {
 
                   {isSubmitting && (
                     <div className="space-y-2 text-white text-sm">
-                      <p>$ curl -X POST https://api.nicolehall.com/contact</p>
+                      <p>$ curl -X POST https://formspree.io/f/xanprgel</p>
                       <p className="text-white/70">Sending payload...</p>
                       <p className="text-green-400">✓ Connection established</p>
+                      <p className="text-white/70">Transmitting data...</p>
                     </div>
                   )}
                 </div>
@@ -233,16 +250,29 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <button
-                  onClick={() => alert('DOWNLOAD UNAVAILABLE - This feature will be implemented soon.')}
+                <a
+                  href="/resume/Nicole_Hall_Nice_Resume.pdf"
+                  download="Nicole_Hall_Resume.pdf"
                   className="w-full flex items-center gap-4 p-5 border-2 border-black hover:bg-black hover:text-white transition-colors"
                 >
                   <div className="text-2xl">↓</div>
                   <div className="text-left">
-                    <p className="font-semibold">Resume</p>
-                    <p className="text-sm opacity-60">Download PDF</p>
+                    <p className="font-semibold">Resume (Designed)</p>
+                    <p className="text-sm opacity-60">Download pretty version</p>
                   </div>
-                </button>
+                </a>
+
+                <a
+                  href="/resume/Nicole_Hall_ATS_Resume.pdf"
+                  download="Nicole_Hall_ATS_Resume.pdf"
+                  className="w-full flex items-center gap-4 p-5 border-2 border-black hover:bg-black hover:text-white transition-colors"
+                >
+                  <div className="text-2xl">↓</div>
+                  <div className="text-left">
+                    <p className="font-semibold">Resume (ATS)</p>
+                    <p className="text-sm opacity-60">Download ATS-friendly version</p>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
