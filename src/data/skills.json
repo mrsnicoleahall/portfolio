@@ -1,0 +1,37 @@
+
+{
+  "invent": [
+    {"name": "Brand Positioning", "description": "Defining the core value proposition and market differentiation."},
+    {"name": "Offer Design", "description": "Structuring compelling products and pricing models."},
+    {"name": "Campaign Strategy", "description": "Developing big-picture creative concepts that drive action."},
+    {"name": "Audience Research", "description": "Mapping customer psychology and pain points."},
+    {"name": "Messaging Frameworks", "description": "Creating hierarchies from awareness to conversion."},
+    {"name": "Go-to-Market Planning", "description": "Orchestrating launch strategies across channels."}
+  ],
+  "amplify": [
+    {"name": "Conversion Copywriting", "description": "Writing headlines and CTAs that convert cold traffic."},
+    {"name": "Email Marketing", "description": "Building automated lifecycle sequences that nurture leads."},
+    {"name": "Ad Creative", "description": "Designing and writing performance ads for Meta and Google."},
+    {"name": "Landing Page Design", "description": "Creating high-converting page layouts and flows."},
+    {"name": "Content Marketing", "description": "Producing educational content that builds authority."},
+    {"name": "Social Media", "description": "Crafting platform-specific content that engages audiences."},
+    {"name": "SEO Optimization", "description": "Writing for search engines and humans simultaneously."}
+  ],
+  "optimize": [
+    {"name": "Web Analytics", "description": "Setting up GA4 tracking to answer business questions."},
+    {"name": "A/B Testing", "description": "Running structured experiments on copy, design, and flows."},
+    {"name": "Performance Metrics", "description": "Improving Core Web Vitals and page speed."},
+    {"name": "Conversion Rate Optimization", "description": "Analyzing funnels and removing friction points."},
+    {"name": "Data Visualization", "description": "Building dashboards that make insights actionable."},
+    {"name": "SQL & BigQuery", "description": "Querying databases to extract meaningful patterns."}
+  ],
+  "automate": [
+    {"name": "API Integrations", "description": "Connecting marketing tools via REST APIs and webhooks."},
+    {"name": "Data Pipelines", "description": "Building ETL workflows that sync data across platforms."},
+    {"name": "QA Automation", "description": "Writing scripts to catch bugs before users do."},
+    {"name": "CI/CD", "description": "Setting up automated testing and deployment workflows."},
+    {"name": "Node.js Scripts", "description": "Creating custom automation for repetitive tasks."},
+    {"name": "Workflow Automation", "description": "Using Zapier and Make to eliminate manual processes."}
+  ],
+  "tools": ["React", "Vite", "Tailwind CSS", "Framer Motion", "GA4", "Looker Studio", "BigQuery", "Meta Ads", "Google Ads", "Node.js", "Git", "Figma", "Webflow", "Zapier", "Make", "HTML/CSS", "JavaScript", "Python"]
+}

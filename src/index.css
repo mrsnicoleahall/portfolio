@@ -1,0 +1,232 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@700&display=swap');
+
+@layer base {
+  :root {
+    --background: #0F172A; /* Slate 900 */
+    --foreground: #F1F5F9; /* Slate 100 */
+    --muted-foreground: #94A3B8; /* Slate 400 */
+    --border: #334155; /* Slate 700 */
+    --card: #1E293B; /* Slate 800 */
+    --card-foreground: #F1F5F9;
+    --primary: #F1F5F9;
+    --primary-foreground: #0F172A;
+    --ring: #94A3B8;
+
+    /* Dark mode - vibrant accents */
+    --creative-accent: #06B6D4; /* Brighter Cyan */
+    --technical-accent: #3B82F6; /* Electric Blue */
+  }
+
+  .light-mode {
+    --background: #FFFFFF;
+    --foreground: #0F172A; /* Slate 900 */
+    --muted-foreground: #475569; /* Slate 600 */
+    --border: #CBD5E1; /* Slate 300 */
+    --card: #F8FAFC; /* Slate 50 */
+    --card-foreground: #0F172A;
+    --primary: #0F172A;
+    --primary-foreground: #FFFFFF;
+    --ring: #475569;
+
+    /* Use darker, more readable versions for light mode */
+    --creative-accent: #0E7490; /* Darker Cyan - very readable */
+    --technical-accent: #1E40AF; /* Darker Blue - very readable */
+  }
+
+  * {
+    @apply transition-colors duration-300;
+  }
+}
+
+body {
+  @apply bg-background text-foreground;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+}
+
+/* Enhanced glow effects */
+.glow-text-creative {
+  text-shadow:
+    0 0 10px var(--creative-accent),
+    0 0 20px var(--creative-accent),
+    0 0 30px var(--creative-accent);
+  transition: text-shadow 0.3s ease;
+}
+
+.glow-text-technical {
+  text-shadow:
+    0 0 10px var(--technical-accent),
+    0 0 20px var(--technical-accent),
+    0 0 30px var(--technical-accent);
+  transition: text-shadow 0.3s ease;
+}
+
+/* Improved glass card with smoother animations */
+.glass-card {
+  @apply bg-card/50 backdrop-blur-xl border border-border/50 rounded-2xl;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  @apply bg-card/70 border-border;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.3);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
+}
+
+/* Animation utilities */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Selection styling */
+::selection {
+  background-color: var(--creative-accent);
+  color: var(--background);
+}
+
+::-moz-selection {
+  background-color: var(--creative-accent);
+  color: var(--background);
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--creative-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Link hover effects */
+a {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Button improvements */
+button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* Improved backdrop blur for better performance */
+@supports (backdrop-filter: blur(40px)) {
+  .glass-card {
+    backdrop-filter: blur(40px) saturate(180%);
+  }
+}
+
+/* Terminal cursor blink */
+@keyframes blink {
+  0%, 49% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* Smooth gradient animations */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite;
+}

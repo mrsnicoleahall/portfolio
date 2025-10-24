@@ -1,0 +1,93 @@
+
+[
+  {
+    "slug": "hybrid-funnel",
+    "title": "Replace a leaky funnel with a system that pays for itself",
+    "type": "Hybrid",
+    "context": "Mid-market services brand; leads rose, conversions collapsed.",
+    "creative": "Rewrote positioning from features to outcomes, simplified the lead capture form.",
+    "technical": "Rebuilt key pages in React SSG, implemented server-side GA4 events, automated lead routing to sales.",
+    "results": [ "CPL down 37% in 60 days", "Close rate up 14% → 24%", "Time to first contact 22h → 2h" ],
+    "receipts": ["GA4 export", "CRM report", "commit log", "changelog"]
+  },
+  {
+    "slug": "clarity-activation",
+    "title": "Stop shouting. Say one true thing and say it everywhere.",
+    "type": "Creative",
+    "context": "SaaS product with scattered messaging.",
+    "creative": "Unified brand story into a single promise, simplified site to three core pages, rewrote onboarding emails to match site promise.",
+    "technical": "Stripped legacy CSS, implemented a consistent type scale, added simple in-app tour events.",
+    "results": [ "Activation +31%", "Trial-to-paid +9 pts", "Tickets -18%" ],
+    "receipts": ["Email diff", "onboarding flow", "dated dashboards"]
+  },
+  {
+    "slug": "static-fast-reliable",
+    "title": "Static, fast, reliable.",
+    "type": "Technical",
+    "context": "Slow content site, broken analytics.",
+    "creative": "Designed a cleaner, more readable article template.",
+    "technical": "Migrated from monolithic CMS to React SSG, optimized images with modern formats, implemented a simple GA4->Sheets ETL pipeline.",
+    "results": [ "TTFB -62%", "CLS <0.05", "Reporting time 6h → 30m" ],
+    "receipts": ["Lighthouse reports", "uptime logs", "GA exports"]
+  },
+  {
+    "slug": "failure-with-fix",
+    "title": "We shipped a change that hurt. We owned it and recovered.",
+    "type": "Hybrid",
+    "context": "SEO migration missed redirect parity, causing a temporary traffic dip.",
+    "creative": "Wrote a public, transparent post-mortem explaining the issue and the fix.",
+    "technical": "Built a parity checklist script, added preflight redirect QA to CI/CD, implemented synthetic monitoring for critical paths.",
+    "results": [ "Organic −18% for 6 days", "Recovered with net +4% in 3 weeks" ],
+    "receipts": ["Timeline", "redirect map", "postmortem notes"]
+  },
+  {
+    "slug": "b2b-content-engine",
+    "title": "Build a content engine that creates customers",
+    "type": "Creative",
+    "context": "B2B tech company with a blog that got traffic but no leads.",
+    "creative": "Developed 3 core content pillars tied to product value, created templates for case studies and guides, embedded CTAs.",
+    "technical": "Built a resource hub with filtering, added schema markup for rich snippets.",
+    "results": [ "Content-sourced leads +200% QoQ", "Time on page for key articles +90s" ],
+    "receipts": ["GA4 content group report", "CRM attribution report"]
+  },
+  {
+    "slug": "abandon-cart-flow",
+    "title": "Recover 15% of abandoned carts with better emails",
+    "type": "Creative",
+    "context": "E-commerce store with a generic, single-step cart abandonment flow.",
+    "creative": "Wrote a 3-step email sequence: reminder with social proof, objection handling (shipping, returns), and a final small incentive.",
+    "technical": "Segmented flow based on cart value, A/B tested subject lines using email provider's API.",
+    "results": [ "Cart recovery rate from 4% to 15%", "$25k recovered revenue in first month" ],
+    "receipts": ["Email platform analytics", "Shopify sales report"]
+  },
+  {
+    "slug": "dev-ops-pipeline",
+    "title": "CI/CD pipeline for a marketing site",
+    "type": "Technical",
+    "context": "Marketing team relied on manual FTP uploads, causing errors and slow deploys.",
+    "creative": "Trained marketing team on using git for content changes.",
+    "technical": "Set up a GitHub Actions pipeline to build the Vite site, run visual regression tests with Percy, and deploy to Netlify.",
+    "results": [ "Deploy time from >1 hour to <5 minutes", "Production errors from manual uploads eliminated" ],
+    "receipts": ["GitHub Actions logs", "Percy.io dashboard"]
+  },
+  {
+    "slug": "data-studio-dashboard",
+    "title": "From 10 spreadsheets to one dashboard",
+    "type": "Technical",
+    "context": "Management team spent a day a week consolidating reports.",
+    "creative": "Designed a one-page dashboard focusing on 5 key metrics.",
+    "technical": "Connected GA4, Google Ads, and CRM data to BigQuery, wrote SQL views to join and clean data, visualized in Looker Studio.",
+    "results": [ "Manual reporting time reduced by 95%", "Shared view of truth across teams" ],
+    "receipts": ["Looker Studio dashboard", "SQL view definitions"]
+  },
+  {
+    "slug": "saas-pricing-page",
+    "title": "Pricing page redesign lifts demo requests by 40%",
+    "type": "Hybrid",
+    "context": "SaaS company's pricing was confusing and scared users away.",
+    "creative": "Redesigned page around value metrics instead of feature lists, added a clear FAQ section, included social proof.",
+    "technical": "A/B tested the new design against the old one using a feature flag system.",
+    "results": [ "Demo requests from pricing page +40%", "Fewer pricing-related support questions" ],
+    "receipts": ["A/B test report", "Hotjar recordings"]
+  }
+]
