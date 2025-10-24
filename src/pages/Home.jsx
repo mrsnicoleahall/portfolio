@@ -1,369 +1,149 @@
-
-import { useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { ArrowRight, ChevronDown } from 'lucide-react';
 
 const Home = () => {
-  const [expandedMarketing, setExpandedMarketing] = useState(null);
-  const [expandedTechnology, setExpandedTechnology] = useState(null);
-
-  const marketingSkills = [
-    {
-      title: "Positioning & Messaging",
-      description: "Defining the core value proposition and crafting narratives that resonate with target audiences. I map the psychological triggers and language patterns that convert browsers into buyers."
-    },
-    {
-      title: "Conversion Copy & Landing Systems",
-      description: "Writing clear, persuasive copy optimized for action. Every word is tested. Every headline has a purpose. Every CTA is designed to reduce friction and increase conversions."
-    },
-    {
-      title: "Lifecycle & Campaign Architecture",
-      description: "Building automated email sequences, nurture flows, and multi-channel campaigns. I design the journey from first touch to loyal customer using behavioral triggers and segmentation."
-    },
-    {
-      title: "Performance Creative & Testing",
-      description: "Designing ad creative that stops the scroll. Running structured A/B tests on headlines, images, and offers. Using data to iterate toward winning combinations."
-    }
-  ];
-
-  const technologySkills = [
-    {
-      title: "React & Modern Web",
-      description: "Building fast, static-generated sites with React, Vite, and Tailwind. Creating responsive, accessible interfaces that load in under 2 seconds and convert on any device."
-    },
-    {
-      title: "Analytics & Data Pipelines",
-      description: "Setting up GA4, building custom dashboards in Looker Studio, and creating ETL pipelines that transform raw data into actionable insights. Making data speak plain English."
-    },
-    {
-      title: "Marketing Automation & APIs",
-      description: "Connecting systems with Zapier, Make, and custom Node scripts. Automating lead flows, data syncs, and repetitive tasks. Removing human error from critical workflows."
-    },
-    {
-      title: "Testing & Quality Assurance",
-      description: "Writing scripts to catch bugs before users do. Setting up CI/CD pipelines. Building automated testing frameworks that ensure quality at scale."
-    }
-  ];
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.1, delayChildren: 0.2 },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 100, damping: 15 } },
-  };
-
-  const SkillItem = ({ skill, isExpanded, onToggle, accentColor, side }) => (
-    <motion.div
-      layout
-      className="relative"
-      initial={{ opacity: 0, x: side === 'left' ? -20 : 20 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ type: 'spring', stiffness: 100, damping: 15 }}
-    >
-      <motion.button
-        onClick={onToggle}
-        className="w-full text-left p-4 rounded-lg transition-all duration-300 hover:bg-card/30 border border-transparent hover:border-border/50"
-        whileHover={{ x: side === 'left' ? 5 : -5 }}
-        whileTap={{ scale: 0.98 }}
-      >
-        <div className="flex items-center justify-between gap-2">
-          <span className={`font-semibold text-lg ${isExpanded ? accentColor : ''} transition-colors duration-300`}>
-            {skill.title}
-          </span>
-          <motion.div
-            animate={{ rotate: isExpanded ? 180 : 0 }}
-            transition={{ duration: 0.3, ease: 'easeInOut' }}
-          >
-            <ChevronDown className={`w-5 h-5 ${isExpanded ? accentColor : 'text-muted-foreground'}`} />
-          </motion.div>
-        </div>
-      </motion.button>
-      <AnimatePresence mode="wait">
-        {isExpanded && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.2, ease: 'easeInOut' }}
-            className="overflow-hidden"
-          >
-            <div className="px-4 pb-4 pt-2 text-muted-foreground leading-relaxed">
-              {skill.description}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.div>
-  );
-
   return (
     <>
       <Helmet>
         <title>Nicole Hall | Marketing Engineer</title>
-        <meta name="description" content="Fluent in human persuasion and machine logic. Building systems that turn ideas into measurable growth." />
+        <meta name="description" content="Marketing Engineer. Black and white. No compromise." />
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
 
-      <motion.div
-        className="space-y-20 py-16"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        {/* Hero Definition Section */}
-        <section className="text-center">
-          <motion.div variants={itemVariants} className="relative max-w-4xl mx-auto">
-            <div className="space-y-2">
-              <h1 className="text-5xl md:text-7xl font-black tracking-tighter uppercase">
-                marketing engineer
-              </h1>
-              <p className="text-lg text-muted-foreground font-mono">
-                /ˈmärkədiNG ˌenjəˈnir/ n.
-              </p>
-            </div>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mt-6">
+      <div className="pt-16">
+        {/* Definition Section at Top */}
+        <div className="relative bg-white border-b border-black py-8 md:py-12">
+          <div className="text-center px-6 md:px-12">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter uppercase mb-2">
+              Marketing Engineer
+            </h1>
+            <p className="text-sm md:text-lg text-gray-600 font-mono mb-1">
+              /ˈmärkədiNG ˌenjəˈnir/ n.
+            </p>
+            <p className="text-lg md:text-xl lg:text-2xl text-black max-w-3xl mx-auto leading-relaxed">
               A person fluent in human persuasion and machine logic. Designs systems that turn ideas into measurable growth.
             </p>
-          </motion.div>
-        </section>
-
-        {/* Dual Panel Interactive Skills Section */}
-        <motion.section
-          variants={itemVariants}
-          className="relative overflow-hidden"
-        >
-          {/* Animated Wave Pattern - showing flow between dualities */}
-          <div className="absolute inset-0 pointer-events-none overflow-hidden">
-            {/* Large wave flowing across */}
-            <motion.div
-              className="absolute inset-0"
-              style={{
-                background: `
-                  radial-gradient(ellipse 120% 60% at 0% 50%, var(--creative-accent) 0%, transparent 50%),
-                  radial-gradient(ellipse 120% 60% at 100% 50%, var(--technical-accent) 0%, transparent 50%)
-                `,
-              }}
-              animate={{
-                opacity: [0.1, 0.2, 0.1],
-              }}
-              transition={{
-                duration: 12,
-                repeat: Infinity,
-                ease: 'easeInOut',
-              }}
-            />
-            {/* Multiple ocean-like flowing waves filling the background */}
-            <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1000 1000" preserveAspectRatio="none">
-              <defs>
-                <linearGradient id="waveGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="var(--creative-accent)" stopOpacity="0.12" />
-                  <stop offset="50%" stopColor="var(--technical-accent)" stopOpacity="0.12" />
-                  <stop offset="100%" stopColor="var(--creative-accent)" stopOpacity="0.12" />
-                </linearGradient>
-                <linearGradient id="waveGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="var(--technical-accent)" stopOpacity="0.1" />
-                  <stop offset="50%" stopColor="var(--creative-accent)" stopOpacity="0.1" />
-                  <stop offset="100%" stopColor="var(--technical-accent)" stopOpacity="0.1" />
-                </linearGradient>
-                <linearGradient id="waveGradient3" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="var(--creative-accent)" stopOpacity="0.08" />
-                  <stop offset="50%" stopColor="var(--technical-accent)" stopOpacity="0.08" />
-                  <stop offset="100%" stopColor="var(--creative-accent)" stopOpacity="0.08" />
-                </linearGradient>
-              </defs>
-              {/* Wave 1 - Main wave - Full height */}
-              <motion.path
-                d="M 0,500 Q 200,100 400,500 T 800,500 Q 900,900 1000,500"
-                fill="none"
-                stroke="url(#waveGradient1)"
-                strokeWidth="350"
-                strokeLinecap="round"
-                animate={{
-                  d: [
-                    "M 0,500 Q 200,100 400,500 T 800,500 Q 900,900 1000,500",
-                    "M 0,500 Q 200,900 400,500 T 800,500 Q 900,100 1000,500",
-                    "M 0,500 Q 200,100 400,500 T 800,500 Q 900,900 1000,500",
-                  ]
-                }}
-                transition={{
-                  duration: 12,
-                  repeat: Infinity,
-                  ease: 'easeInOut',
-                }}
-              />
-              {/* Wave 2 - Secondary wave - Full height */}
-              <motion.path
-                d="M 0,300 Q 250,50 500,300 T 1000,300"
-                fill="none"
-                stroke="url(#waveGradient2)"
-                strokeWidth="300"
-                strokeLinecap="round"
-                animate={{
-                  d: [
-                    "M 0,300 Q 250,50 500,300 T 1000,300",
-                    "M 0,300 Q 250,950 500,300 T 1000,300",
-                    "M 0,300 Q 250,50 500,300 T 1000,300",
-                  ]
-                }}
-                transition={{
-                  duration: 15,
-                  repeat: Infinity,
-                  ease: 'easeInOut',
-                  delay: 1,
-                }}
-              />
-              {/* Wave 3 - Tertiary wave - Full height */}
-              <motion.path
-                d="M 0,700 Q 300,200 600,700 T 1000,700"
-                fill="none"
-                stroke="url(#waveGradient3)"
-                strokeWidth="320"
-                strokeLinecap="round"
-                animate={{
-                  d: [
-                    "M 0,700 Q 300,200 600,700 T 1000,700",
-                    "M 0,700 Q 300,950 600,700 T 1000,700",
-                    "M 0,700 Q 300,200 600,700 T 1000,700",
-                  ]
-                }}
-                transition={{
-                  duration: 18,
-                  repeat: Infinity,
-                  ease: 'easeInOut',
-                  delay: 2,
-                }}
-              />
-            </svg>
           </div>
+        </div>
 
-          {/* Vertical Split Container */}
-          <div className="relative grid md:grid-cols-2 gap-0">
-            {/* Marketing Side */}
-            <motion.div
-              className="relative p-8 md:pr-6"
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.3, duration: 0.6 }}
-            >
-              <div className="sticky top-8">
-                <h2 className="text-4xl md:text-5xl font-black mb-3 glow-text-creative">
-                  Marketing
-                </h2>
-                <p className="text-muted-foreground mb-8 leading-relaxed">
-                  I map the audience, write the story, and design the path to action. Every campaign is a hypothesis. Every metric tells a story.
-                </p>
-                <div className="space-y-2">
-                  {marketingSkills.map((skill, idx) => (
-                    <SkillItem
-                      key={idx}
-                      skill={skill}
-                      isExpanded={expandedMarketing === idx}
-                      onToggle={() => setExpandedMarketing(expandedMarketing === idx ? null : idx)}
-                      accentColor="text-creative-accent"
-                      side="left"
-                    />
-                  ))}
+        {/* Split Section with Content from About */}
+        <div className="flex flex-col md:flex-row relative">
+          {/* Left Side - Black - Marketing */}
+          <div className="w-full md:w-1/2 bg-black text-white p-8 md:p-16 flex items-center justify-center">
+            <div className="max-w-xl">
+              <h2 className="text-3xl md:text-4xl font-black uppercase mb-8">Marketing</h2>
+
+              <div className="space-y-8 md:space-y-12">
+                <div>
+                  <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4">Strategy & Positioning</h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    Defining core value propositions and market differentiation. Mapping audience psychology and pain points that drive action.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4">Copywriting & Content</h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    Writing headlines that stop the scroll. Crafting landing page copy that converts cold traffic. Every word earns its place.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4">Brand & Design</h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    Creating visual identities that communicate positioning. Designing interfaces that guide users naturally toward conversion.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4">Campaign Development</h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    Developing creative concepts that cut through noise. Building lifecycle flows that nurture leads through automation.
+                  </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
+          </div>
 
-            {/* Technology Side */}
-            <motion.div
-              className="relative p-8 md:pl-6"
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.3, duration: 0.6 }}
-            >
-              <div className="sticky top-8">
-                <h2 className="text-4xl md:text-5xl font-black mb-3 glow-text-technical">
-                  Technology
-                </h2>
-                <p className="text-muted-foreground mb-8 leading-relaxed">
-                  I build the machinery. Fast sites. Clean pipelines. Automated workflows. If it's manual and repeated more than twice, I script it.
-                </p>
-                <div className="space-y-2">
-                  {technologySkills.map((skill, idx) => (
-                    <SkillItem
-                      key={idx}
-                      skill={skill}
-                      isExpanded={expandedTechnology === idx}
-                      onToggle={() => setExpandedTechnology(expandedTechnology === idx ? null : idx)}
-                      accentColor="text-technical-accent"
-                      side="right"
-                    />
-                  ))}
+          {/* Right Side - White - Engineer */}
+          <div className="w-full md:w-1/2 bg-white text-black p-8 md:p-16 flex items-center justify-center">
+            <div className="max-w-xl">
+              <h2 className="text-3xl md:text-4xl font-black uppercase mb-8">Engineer</h2>
+
+              <div className="space-y-8 md:space-y-12">
+                <div>
+                  <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4">Full-Stack Development</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Building production-ready web applications with React, Vite, and modern JavaScript. Clean, maintainable code that scales.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4">Data & Analytics</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Setting up tracking architectures that capture meaningful data. Building dashboards that answer business questions.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4">Automation & CI/CD</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Writing scripts to automate repetitive tasks. Building pipelines for quality assurance. Removing human error from critical processes.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4">Systems Architecture</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Designing systems that connect marketing tools, CRMs, and data warehouses. Building scalable infrastructure that handles growth.
+                  </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
 
-          {/* Center Divider - Many Animated Dots (No Border Line) */}
-          <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-0 bottom-0 pointer-events-none">
-            {/* Many flowing particles evenly distributed */}
-            {[...Array(30)].map((_, i) => (
-              <motion.div
-                key={i}
-                className="absolute left-0 w-3 h-3 rounded-full"
-                style={{
-                  background: i % 2 === 0 ? 'var(--creative-accent)' : 'var(--technical-accent)',
-                  boxShadow: `0 0 12px ${i % 2 === 0 ? 'var(--creative-accent)' : 'var(--technical-accent)'}`,
-                  filter: `brightness(${1.2 + (i % 3) * 0.2})`,
-                  top: `${(i / 30) * 100}%`, // Distribute evenly from 0% to 100%
-                }}
-                animate={{
-                  y: [0, 1000],
-                  opacity: [0, 0.9, 0.9, 0],
-                  scale: [0.4, 1.2, 1.2, 0.4],
-                }}
-                transition={{
-                  duration: 4 + (i % 8) * 0.5,
-                  repeat: Infinity,
-                  delay: i * 0.15,
-                  ease: 'linear',
-                }}
-              />
-            ))}
-          </div>
-        </motion.section>
+          {/* Center Line - Only visible on desktop, starts at beginning of split section */}
+          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gray-500"></div>
+        </div>
 
-        {/* CTA Section */}
-        <motion.div
-          variants={itemVariants}
-          className="flex flex-col items-center justify-center text-center pt-12 relative"
-        >
-          <h3 className="text-3xl md:text-4xl font-black tracking-tighter uppercase mb-6">
-            Both obsessed with proof.
-          </h3>
-          <Link to="/proof">
-            <motion.div
-              className="relative group"
-              whileHover="hover"
-            >
-              <motion.div
-                className="absolute -inset-1 bg-gradient-to-r from-creative-accent to-technical-accent rounded-lg blur-md opacity-60 group-hover:opacity-100"
-                variants={{ hover: { scale: 1.05 } }}
-                transition={{ duration: 0.3 }}
-              />
-              <Button
-                size="lg"
-                className="relative text-lg px-8 py-6 rounded-lg bg-background text-foreground border-2 border-primary hover:bg-primary hover:text-background transition-all duration-300"
-              >
-                View the Proof
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform duration-300"/>
-              </Button>
-            </motion.div>
-          </Link>
-        </motion.div>
-      </motion.div>
+        {/* About Me Section */}
+        <div className="bg-white border-t-2 border-black">
+          <div className="max-w-4xl mx-auto p-8 md:p-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black uppercase tracking-tighter mb-8 md:mb-12 text-center">
+              About Me
+            </h2>
+
+            <div className="space-y-4 md:space-y-6 text-base md:text-lg leading-relaxed">
+              <p>
+                I'm Nicole Hall, a marketing strategist who somehow turned a messy life into a career that thrives on untangling other people's messes. Cute, right?
+              </p>
+
+              <p>
+                I've spent more than two decades helping businesses figure out why their marketing is broken, then fixing it so they stop throwing money into the digital void. I ask the hard questions like "Why are we doing this?" and "Who approved this?" and "Did we really think Comic Sans was the answer?" My job is to turn chaos into strategy and chaos into growth and, occasionally, chaos into a polite email with bullet points.
+              </p>
+
+              <p>
+                My path here wasn't exactly a storybook climb up the corporate ladder. More like the ladder was missing rungs, on fire, and sometimes being used as a baseball bat. I faced addiction, trauma, detours, and the kind of plot twists that make people lean in and whisper "wait… what happened next?" But here's the thrilling part: I didn't just survive it, I learned from it. Turns out resilience makes a great superpower, right after sarcasm.
+              </p>
+
+              <p>
+                That winding road taught me how to rebuild. A life. A business. A marketing plan that doesn't make everyone hate their job. I care about results that actually matter and strategies that don't make people want to crawl under their desk. I believe marketing is about telling the truth in a way people want to hear. Groundbreaking, I know.
+              </p>
+
+              <p>
+                Professionally speaking, I've led teams, built brands from scratch, launched campaigns that actually worked, and helped companies make friends with data instead of crying about it. I'm obsessed with clarity, allergic to buzzwords, and known to roll my eyes at "synergy" more than medically recommended.
+              </p>
+
+              <p>
+                Here's the deal. If you work with me, you'll get honesty, stubborn commitment, clever strategy, and a sense of humor that somehow survived everything. I believe progress beats perfection every time. And yes, coffee keeps the whole operation running.
+              </p>
+
+              <p className="font-bold text-lg md:text-xl">
+                So that's me. Resilient. Strategic. Slightly feral. Let's build cool things anyway.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
