@@ -63,7 +63,6 @@ const Skills = () => {
     { name: 'Framer Motion', description: 'Creating smooth animations and micro-interactions' },
     { name: 'Stripe', description: 'Integrating payment processing and subscription management' },
     { name: 'Airtable', description: 'Building custom databases and workflow management systems' },
-    { name: 'Make.com', description: 'Creating complex multi-step automation workflows' },
     { name: 'Salesforce', description: 'Configuring CRM processes and marketing cloud integrations' },
     { name: 'Segment', description: 'Implementing customer data platforms and event tracking' },
     { name: 'SQL & BigQuery', description: 'Querying databases to extract insights from large datasets' },
@@ -118,7 +117,9 @@ const Skills = () => {
         </div>
 
         {/* Proof Section - Now First */}
-        <div id="proof" className="max-w-7xl mx-auto p-8 md:p-16 scroll-mt-32">
+        <div id="proof" className="max-w-7xl mx-auto p-8 md:p-16 scroll-mt-32 relative">
+          {/* Subtle color accent - top right */}
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-yellow-400/75 to-transparent blur-lg -z-10"></div>
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-4">
               Proof
@@ -150,8 +151,10 @@ const Skills = () => {
         </div>
 
         {/* Skills Section */}
-        <div id="skills" className="border-t-2 border-black scroll-mt-32">
-          <div className="max-w-7xl mx-auto p-8 md:p-16">
+        <div id="skills" className="border-t-2 border-black scroll-mt-32 relative overflow-hidden">
+          {/* Subtle color accent - center left */}
+          <div className="absolute top-1/2 left-0 w-[600px] h-[600px] bg-gradient-to-r from-green-400/70 to-transparent blur-lg"></div>
+          <div className="max-w-7xl mx-auto p-8 md:p-16 relative z-10">
             <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-16 text-center">
               Skills
             </h1>
@@ -199,8 +202,10 @@ const Skills = () => {
         </div>
 
         {/* Examples Section */}
-        <div id="examples" className="border-t-2 border-black bg-gray-50 scroll-mt-32">
-          <div className="max-w-7xl mx-auto p-8 md:p-16">
+        <div id="examples" className="border-t-2 border-black bg-gray-50 scroll-mt-32 relative overflow-hidden">
+          {/* Subtle color accent - bottom right */}
+          <div className="absolute bottom-0 right-0 w-[700px] h-[700px] bg-gradient-to-tl from-purple-400/70 to-transparent blur-lg"></div>
+          <div className="max-w-7xl mx-auto p-8 md:p-16 relative z-10">
             <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-12 text-center">
               Examples
             </h1>

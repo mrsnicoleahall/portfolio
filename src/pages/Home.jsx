@@ -11,8 +11,10 @@ const Home = () => {
 
       <div className="pt-16">
         {/* Definition Section at Top */}
-        <div className="relative bg-white border-b border-black py-8 md:py-12">
-          <div className="text-center px-6 md:px-12">
+        <div className="relative bg-white border-b border-black py-8 md:py-12 overflow-hidden">
+          {/* Subtle color accent - top right */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-pink-400/70 to-transparent blur-lg"></div>
+          <div className="text-center px-6 md:px-12 relative z-10">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter uppercase mb-2">
               Marketing Engineer
             </h1>
@@ -106,8 +108,10 @@ const Home = () => {
         </div>
 
         {/* About Me Section */}
-        <div className="bg-white border-t-2 border-black">
-          <div className="max-w-4xl mx-auto p-8 md:p-16">
+        <div className="bg-white border-t-2 border-black relative overflow-hidden">
+          {/* Subtle color accent - bottom left */}
+          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-blue-400/70 to-transparent blur-lg"></div>
+          <div className="max-w-4xl mx-auto p-8 md:p-16 relative z-10">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-black uppercase tracking-tighter mb-8 md:mb-12 text-center">
               About Me
             </h2>

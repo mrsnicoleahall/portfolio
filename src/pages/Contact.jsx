@@ -99,8 +99,12 @@ const Contact = () => {
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
 
-      <div className="min-h-screen pt-16 bg-white">
-        <div className="max-w-6xl mx-auto p-16">
+      <div className="min-h-screen pt-16 bg-white relative overflow-hidden">
+        {/* Subtle color accent - top left */}
+        <div className="absolute top-20 left-0 w-[600px] h-[600px] bg-gradient-to-br from-orange-400/75 to-transparent blur-lg"></div>
+        {/* Subtle color accent - bottom right */}
+        <div className="absolute bottom-20 right-0 w-[700px] h-[700px] bg-gradient-to-tl from-red-400/70 to-transparent blur-lg"></div>
+        <div className="max-w-6xl mx-auto p-16 relative z-10">
           <div className="text-center mb-16">
             <h1 className="text-5xl font-black uppercase tracking-tighter mb-4">
               Contact

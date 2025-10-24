@@ -89,5 +89,105 @@
     "technical": "A/B tested the new design against the old one using a feature flag system.",
     "results": [ "Demo requests from pricing page +40%", "Fewer pricing-related support questions" ],
     "receipts": ["A/B test report", "Hotjar recordings"]
+  },
+  {
+    "slug": "meta-ads-healthcare",
+    "title": "Healthcare client: $28k revenue from $3.2k ad spend",
+    "type": "Hybrid",
+    "context": "Local healthcare provider needed new patient acquisition at scale.",
+    "creative": "Developed patient testimonial video ads, wrote benefit-focused copy addressing common pain points, designed landing pages for each service line.",
+    "technical": "Set up Meta Pixel with server-side conversion tracking, built custom audiences from CRM data, implemented automated lead scoring via Zapier.",
+    "results": [ "$28,417 in revenue from $3,247 ad spend", "ROAS 8.7x", "89 qualified leads, 23 became patients" ],
+    "receipts": ["Meta Ads Manager screenshots", "CRM conversion report"]
+  },
+  {
+    "slug": "email-reactivation",
+    "title": "Win back 18% of dormant subscribers with targeted campaign",
+    "type": "Creative",
+    "context": "SaaS company had 12k inactive subscribers who hadn't opened an email in 6+ months.",
+    "creative": "Created a 4-email reactivation series: feedback request, value reminder, product updates, final farewell with unsubscribe prompt.",
+    "technical": "Segmented list by last engagement date and account status, set up automated workflow in HubSpot, tracked re-engagement metrics.",
+    "results": [ "18% reactivation rate (2,160 subscribers)", "342 trial signups from reactivated list", "List health improved with unengaged removed" ],
+    "receipts": ["HubSpot workflow report", "engagement metrics"]
+  },
+  {
+    "slug": "seo-content-overhaul",
+    "title": "Organic traffic up 240% in 6 months with strategic content",
+    "type": "Hybrid",
+    "context": "B2B service company had minimal organic visibility for high-intent keywords.",
+    "creative": "Conducted keyword research and competitive gap analysis, created 32 new SEO-optimized pages and blog posts, developed internal linking strategy.",
+    "technical": "Implemented schema markup for services and FAQs, optimized Core Web Vitals, built XML sitemaps, set up Search Console tracking.",
+    "results": [ "Organic traffic +240% in 6 months", "15 keywords ranking in top 3", "Organic-sourced leads +170%" ],
+    "receipts": ["Search Console reports", "GA4 organic traffic graphs", "keyword ranking tracker"]
+  },
+  {
+    "slug": "conversion-landing-page",
+    "title": "Landing page CRO increases conversions from 2.1% to 8.7%",
+    "type": "Hybrid",
+    "context": "High-traffic landing page for paid campaigns had poor conversion rate.",
+    "creative": "Rewrote headline to focus on core benefit, simplified form from 9 fields to 4, added trust badges and client logos, clarified CTA copy.",
+    "technical": "Implemented heatmaps and session recordings via Hotjar, ran 3 rounds of A/B tests, improved page load speed by lazy-loading images.",
+    "results": [ "Conversion rate from 2.1% to 8.7%", "Same traffic, 4x more leads", "Cost per lead reduced by 76%" ],
+    "receipts": ["Hotjar heatmaps", "A/B test results", "before/after screenshots"]
+  },
+  {
+    "slug": "marketing-automation-lifecycle",
+    "title": "Automated lifecycle marketing increases LTV by 34%",
+    "type": "Technical",
+    "context": "E-commerce brand had transactional emails only, no nurture sequences.",
+    "creative": "Mapped customer journey and created 7 automated campaigns: welcome series, educational content, cross-sell, post-purchase, review requests, loyalty program, win-back.",
+    "technical": "Built workflows in Klaviyo with branching logic based on purchase behavior, integrated with Shopify for real-time data sync, set up cohort analysis tracking.",
+    "results": [ "Email revenue contribution +$87k monthly", "Customer LTV +34%", "Repeat purchase rate from 12% to 23%" ],
+    "receipts": ["Klaviyo workflow screenshots", "revenue attribution report"]
+  },
+  {
+    "slug": "brand-messaging-refresh",
+    "title": "Brand repositioning leads to 3x qualified demo requests",
+    "type": "Creative",
+    "context": "B2B SaaS struggled to differentiate from competitors, messaging was generic.",
+    "creative": "Conducted customer interviews to identify unique value, developed new positioning framework, rewrote homepage and all core pages, created new brand voice guidelines.",
+    "technical": "Updated site meta descriptions and title tags for SEO, implemented consistent messaging across all touchpoints, trained sales team on new messaging.",
+    "results": [ "Demo requests +195% QoQ", "Sales qualified leads tripled", "Sales cycle shortened by 18 days" ],
+    "receipts": ["Positioning doc", "before/after page screenshots", "CRM funnel metrics"]
+  },
+  {
+    "slug": "webflow-site-rebuild",
+    "title": "Migrated marketing site to Webflow, enabling team autonomy",
+    "type": "Technical",
+    "context": "Marketing team relied on dev team for every site update, causing bottlenecks.",
+    "creative": "Designed component-based system with clear CMS structure for case studies and blog posts.",
+    "technical": "Rebuilt entire site in Webflow with custom interactions, set up CMS collections, integrated with Zapier for form submissions, maintained 301 redirects for SEO.",
+    "results": [ "Marketing team can now publish updates same-day", "Dev team freed up 15+ hours/month", "Site performance improved 40%" ],
+    "receipts": ["Webflow project", "before/after Lighthouse scores"]
+  },
+  {
+    "slug": "google-ads-lead-gen",
+    "title": "Google Ads campaign generates 127 leads at $42 CPL",
+    "type": "Hybrid",
+    "context": "Professional services firm wanted to expand beyond referrals.",
+    "creative": "Wrote search ads focused on specific pain points, created dedicated landing pages for each service, developed compelling offers (free consultation, guide downloads).",
+    "technical": "Set up Google Ads with conversion tracking, implemented negative keyword strategy, created remarketing audiences, built automated bid rules.",
+    "results": [ "127 qualified leads in 90 days", "$42 average CPL", "14 closed deals worth $86k" ],
+    "receipts": ["Google Ads dashboard", "conversion tracking reports"]
+  },
+  {
+    "slug": "attribution-modeling",
+    "title": "Multi-touch attribution reveals hidden channel value",
+    "type": "Technical",
+    "context": "All credit went to last-click, causing underinvestment in awareness channels.",
+    "creative": "Educated stakeholders on attribution models and presented data story showing full customer journey.",
+    "technical": "Built custom attribution model in BigQuery pulling data from GA4, ad platforms, and CRM, created Looker Studio dashboard with channel contribution analysis.",
+    "results": [ "Discovered social and content drove 40% of pipeline", "Budget reallocated to undervalued channels", "Overall CAC decreased 22%" ],
+    "receipts": ["Attribution model SQL", "Looker dashboard", "budget allocation changes"]
+  },
+  {
+    "slug": "product-launch-campaign",
+    "title": "Coordinated product launch generates 1,200 signups in 2 weeks",
+    "type": "Creative",
+    "context": "New product feature needed awareness and adoption among existing user base.",
+    "creative": "Developed launch strategy across email, in-app messaging, blog, and social media, created teaser campaign building anticipation, designed launch day assets.",
+    "technical": "Set up product analytics to track feature adoption, coordinated email sequences in marketing automation, created in-app tooltips and modals.",
+    "results": [ "1,200 signups in first 2 weeks", "45% of target audience activated feature within 30 days", "92% positive sentiment in user feedback" ],
+    "receipts": ["Campaign timeline", "adoption metrics", "user feedback summary"]
   }
 ]
