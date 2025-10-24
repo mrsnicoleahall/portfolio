@@ -101,21 +101,21 @@ const Contact = () => {
       </Helmet>
 
       <div className="min-h-screen pt-16 bg-gray-900">
-        <div className="max-w-6xl mx-auto p-16">
-          <div className="text-center mb-16">
+        <div className="max-w-6xl mx-auto px-4 md:px-8 lg:px-16 py-8 md:py-16">
+          <div className="text-center mb-8 md:mb-16">
             <p className="text-green-400 font-mono text-sm mb-2">$ cd contact && ls</p>
-            <h1 className="text-5xl font-black uppercase tracking-tighter mb-4 text-cyan-400 font-mono">
+            <h1 className="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-4 text-cyan-400 font-mono">
               &gt; CONTACT
             </h1>
-            <p className="text-xl text-gray-300 font-mono">
+            <p className="text-lg md:text-xl text-gray-300 font-mono">
               Use the terminal below or reach out via email
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-start">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-start">
             {/* Terminal Form - Left Side */}
             <div className="relative">
-              <div className="bg-black border-2 border-black p-8 font-mono flex flex-col min-h-[600px]">
+              <div className="bg-black border-2 border-black p-4 md:p-8 font-mono flex flex-col min-h-[600px]">
                 {/* Terminal Header */}
                 <div className="flex items-center gap-3 mb-6 pb-3 border-b border-white/20">
                   <div className="flex gap-1.5">

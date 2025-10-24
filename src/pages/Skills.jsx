@@ -241,27 +241,27 @@ const Skills = () => {
                     These resources highlight how I think about marketing at both a strategic and executional level, from frameworks to audience insights to campaign delivery.
                   </p>
                   <ul className="space-y-3">
-                    <li>
+                    <li className="break-words">
                       <span className="font-bold text-white font-mono text-sm">Marketing Strategy Framework:</span>{' '}
-                      <a href="https://drive.google.com/file/d/199U6xyWPFRc_9UktHUppsMcPPpajIR0Y/view" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs">
+                      <a href="https://drive.google.com/file/d/199U6xyWPFRc_9UktHUppsMcPPpajIR0Y/view" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs break-all">
                         https://drive.google.com/file/d/199U6xyWPFRc_9UktHUppsMcPPpajIR0Y/view
                       </a>
                     </li>
-                    <li>
+                    <li className="break-words">
                       <span className="font-bold text-white font-mono text-sm">Audience Analysis via Personas:</span>{' '}
-                      <a href="https://drive.google.com/file/d/1m6KxuASL-IeH0zTSA7Jqwp4LiIT1J6M-/view" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs">
+                      <a href="https://drive.google.com/file/d/1m6KxuASL-IeH0zTSA7Jqwp4LiIT1J6M-/view" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs break-all">
                         https://drive.google.com/file/d/1m6KxuASL-IeH0zTSA7Jqwp4LiIT1J6M-/view
                       </a>
                     </li>
-                    <li>
+                    <li className="break-words">
                       <span className="font-bold text-white font-mono text-sm">Campaign Case Study (from ideation to execution):</span>{' '}
-                      <a href="https://nicole-ems-case-study.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs">
+                      <a href="https://nicole-ems-case-study.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs break-all">
                         https://nicole-ems-case-study.netlify.app/
                       </a>
                     </li>
-                    <li>
+                    <li className="break-words">
                       <span className="font-bold text-white font-mono text-sm">Strategic Marketing Pitch Deck:</span>{' '}
-                      <a href="https://drive.google.com/file/d/1Sc9TXDro75YD48HGL4c4YKUR1GbcuXon/view" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs">
+                      <a href="https://drive.google.com/file/d/1Sc9TXDro75YD48HGL4c4YKUR1GbcuXon/view" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs break-all">
                         https://drive.google.com/file/d/1Sc9TXDro75YD48HGL4c4YKUR1GbcuXon/view
                       </a>
                     </li>
@@ -287,27 +287,27 @@ const Skills = () => {
                     To give you a sense of my writing style and approach to marketing communication, here are a few examples of my published work:
                   </p>
                   <ul className="space-y-3">
-                    <li>
+                    <li className="break-words">
                       <span className="font-bold text-white font-mono text-sm">LinkedIn Article:</span>{' '}
                       <a href="https://www.linkedin.com/pulse/marketers-business-leaders-ai-survival-guide-nicole-choman/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs break-all">
                         https://www.linkedin.com/pulse/marketers-business-leaders-ai-survival-guide-nicole-choman/
                       </a>
                     </li>
-                    <li>
+                    <li className="break-words">
                     <span className="font-bold text-white font-mono text-sm">Blog Post:</span>{' '}
                       <a href="https://marketingcar.com/blog/5-quick-ways-to-improve-small-business-marketing" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs break-all">
                         https://marketingcar.com/blog/5-quick-ways-to-improve-small-business-marketing
                       </a>
                     </li>
-                    <li>
+                    <li className="break-words">
                       <span className="font-bold text-white font-mono text-sm">Book (Bad Marketing):</span>{' '}
                       <a href="https://drive.google.com/file/d/14SY2auY_oBeguLB1eg24ruzsFeUZx4GA/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs break-all">
                         https://drive.google.com/file/d/14SY2auY_oBeguLB1eg24ruzsFeUZx4GA/view
                       </a>
                     </li>
-                    <li>
+                    <li className="break-words">
                       <span className="font-bold text-white font-mono text-sm">Strategic Marketing Pitch Deck:</span>{' '}
-                      <a href="https://drive.google.com/file/d/1Sc9TXDro75YD48HGL4c4YKUR1GbcuXon/view" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs">
+                      <a href="https://drive.google.com/file/d/1Sc9TXDro75YD48HGL4c4YKUR1GbcuXon/view" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs break-all">
                         https://drive.google.com/file/d/1Sc9TXDro75YD48HGL4c4YKUR1GbcuXon/view
                       </a>
                     </li>
@@ -333,15 +333,15 @@ const Skills = () => {
                     These projects showcase my ability to create cohesive brand identities that align with strategy and audience.
                   </p>
                   <ul className="space-y-3 mb-8">
-                    <li>
+                    <li className="break-words">
                       <span className="font-bold text-white font-mono text-sm">Brand Design Example (Seerist):</span>{' '}
-                      <a href="https://www.figma.com/design/jDTC2AOUgTQviVDbIseF3J/Seerist?node-id=0-1&p=f" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs">
+                      <a href="https://www.figma.com/design/jDTC2AOUgTQviVDbIseF3J/Seerist?node-id=0-1&p=f" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs break-all">
                         https://www.figma.com/design/jDTC2AOUgTQviVDbIseF3J/Seerist?node-id=0-1&p=f
                       </a>
                     </li>
-                    <li>
+                    <li className="break-words">
                       <span className="font-bold text-white font-mono text-sm">Brand Design Example (Basic Instructions):</span>{' '}
-                      <a href="https://xd.adobe.com/view/688f8407-8edb-48a6-8206-5d9040dd6e7c-3ddc/?hints=off" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs">
+                      <a href="https://xd.adobe.com/view/688f8407-8edb-48a6-8206-5d9040dd6e7c-3ddc/?hints=off" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs break-all">
                         https://xd.adobe.com/view/688f8407-8edb-48a6-8206-5d9040dd6e7c-3ddc/?hints=off
                       </a>
                     </li>
@@ -350,19 +350,19 @@ const Skills = () => {
                     $ cat site_examples.txt
                   </h3>
                   <div className="flex flex-wrap gap-4">
-                    <a href="https://wtfareu.com" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs">
+                    <a href="https://wtfareu.com" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs break-all">
                       wtfareu.com
                     </a>
-                    <a href="https://oasishealthservices.com" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs">
+                    <a href="https://oasishealthservices.com" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs break-all">
                       oasishealthservices.com
                     </a>
-                    <a href="https://marketingcar.com" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs">
+                    <a href="https://marketingcar.com" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs break-all">
                       marketingcar.com
                     </a>
-                    <a href="https://clarkcounselingandconsulting.com" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs">
+                    <a href="https://clarkcounselingandconsulting.com" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs break-all">
                       clarkcounselingandconsulting.com
                     </a>
-                    <a href="https://bxhealthtx.com" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs">
+                    <a href="https://bxhealthtx.com" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs break-all">
                       bxhealthtx.com
                     </a>
                   </div>
