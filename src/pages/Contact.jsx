@@ -15,6 +15,7 @@ const Contact = () => {
     { field: 'message', prompt: 'ENTER YOUR MESSAGE:', placeholder: 'I would like to discuss...' }
   ];
 
+
   // Blinking cursor effect
   useEffect(() => {
     const interval = setInterval(() => {
@@ -99,17 +100,14 @@ const Contact = () => {
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
 
-      <div className="min-h-screen pt-16 bg-white relative overflow-hidden">
-        {/* Subtle color accent - top left */}
-        <div className="absolute top-20 left-0 w-[600px] h-[600px] bg-gradient-to-br from-orange-400/75 to-transparent blur-lg"></div>
-        {/* Subtle color accent - bottom right */}
-        <div className="absolute bottom-20 right-0 w-[700px] h-[700px] bg-gradient-to-tl from-red-400/70 to-transparent blur-lg"></div>
-        <div className="max-w-6xl mx-auto p-16 relative z-10">
+      <div className="min-h-screen pt-16 bg-gray-900">
+        <div className="max-w-6xl mx-auto p-16">
           <div className="text-center mb-16">
-            <h1 className="text-5xl font-black uppercase tracking-tighter mb-4">
-              Contact
+            <p className="text-green-400 font-mono text-sm mb-2">$ cd contact && ls</p>
+            <h1 className="text-5xl font-black uppercase tracking-tighter mb-4 text-cyan-400 font-mono">
+              &gt; CONTACT
             </h1>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-300 font-mono">
               Use the terminal below or reach out via email
             </p>
           </div>
@@ -117,7 +115,7 @@ const Contact = () => {
           <div className="grid md:grid-cols-2 gap-12 items-start">
             {/* Terminal Form - Left Side */}
             <div className="relative">
-              <div className="bg-black border-2 border-black p-8 font-mono">
+              <div className="bg-black border-2 border-black p-8 font-mono flex flex-col min-h-[600px]">
                 {/* Terminal Header */}
                 <div className="flex items-center gap-3 mb-6 pb-3 border-b border-white/20">
                   <div className="flex gap-1.5">
@@ -129,7 +127,7 @@ const Contact = () => {
                 </div>
 
                 {/* Terminal Content */}
-                <div className="space-y-4 min-h-[400px]">
+                <div className="space-y-4 flex-1 flex flex-col">
                   <div className="text-sm">
                     <p className="text-white">$ ./contact.sh</p>
                     <p className="text-white/70 mt-1">Initializing contact protocol...</p>
@@ -218,18 +216,19 @@ const Contact = () => {
             {/* Alternative Channels - Right Side */}
             <div className="space-y-6">
               <div>
-                <h3 className="text-3xl font-bold mb-2 uppercase">Alternative Channels</h3>
-                <p className="text-gray-600">Prefer a different protocol? Choose your method.</p>
+                <p className="text-green-400 font-mono text-sm mb-2">$ cat channels.txt</p>
+                <h3 className="text-3xl font-bold mb-2 uppercase text-cyan-400 font-mono">ALTERNATIVE_CHANNELS</h3>
+                <p className="text-gray-400 font-mono text-sm">Prefer a different protocol? Choose your method.</p>
               </div>
               <div className="space-y-3">
                 <a
                   href="mailto:mrsnicoleahall@gmail.com"
-                  className="flex items-center gap-4 p-5 border-2 border-black hover:bg-black hover:text-white transition-colors"
+                  className="flex items-center gap-4 p-5 border-2 border-white/20 bg-black hover:bg-white/5 transition-colors"
                 >
                   <div className="text-2xl">✉</div>
                   <div>
-                    <p className="font-semibold">Email</p>
-                    <p className="text-sm opacity-60">mrsnicoleahall@gmail.com</p>
+                    <p className="font-semibold text-white font-mono">Email</p>
+                    <p className="text-sm text-gray-400 font-mono">mrsnicoleahall@gmail.com</p>
                   </div>
                 </a>
 
@@ -237,44 +236,44 @@ const Contact = () => {
                   href="https://linkedin.com/in/real-strategy"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-5 border-2 border-black hover:bg-black hover:text-white transition-colors"
+                  className="flex items-center gap-4 p-5 border-2 border-white/20 bg-black hover:bg-white/5 transition-colors"
                 >
-                  <div className="text-2xl">in</div>
+                  <div className="text-2xl text-white">in</div>
                   <div>
-                    <p className="font-semibold">LinkedIn</p>
-                    <p className="text-sm opacity-60">linkedin.com/in/real-strategy</p>
+                    <p className="font-semibold text-white font-mono">LinkedIn</p>
+                    <p className="text-sm text-gray-400 font-mono">linkedin.com/in/real-strategy</p>
                   </div>
                 </a>
 
-                <div className="flex items-center gap-4 p-5 border-2 border-black">
+                <div className="flex items-center gap-4 p-5 border-2 border-white/20 bg-black">
                   <div className="text-2xl">📍</div>
                   <div>
-                    <p className="font-semibold">Location</p>
-                    <p className="text-sm opacity-60">Raleigh, NC</p>
+                    <p className="font-semibold text-white font-mono">Location</p>
+                    <p className="text-sm text-gray-400 font-mono">Raleigh, NC</p>
                   </div>
                 </div>
 
                 <a
                   href="/resume/Nicole_Hall_Nice_Resume.pdf"
                   download="Nicole_Hall_Resume.pdf"
-                  className="w-full flex items-center gap-4 p-5 border-2 border-black hover:bg-black hover:text-white transition-colors"
+                  className="w-full flex items-center gap-4 p-5 border-2 border-white/20 bg-black hover:bg-white/5 transition-colors"
                 >
-                  <div className="text-2xl">↓</div>
+                  <div className="text-2xl text-purple-400">↓</div>
                   <div className="text-left">
-                    <p className="font-semibold">Resume (Designed)</p>
-                    <p className="text-sm opacity-60">Download pretty version</p>
+                    <p className="font-semibold text-white font-mono">Resume (Designed)</p>
+                    <p className="text-sm text-gray-400 font-mono">Download pretty version</p>
                   </div>
                 </a>
 
                 <a
                   href="/resume/Nicole_Hall_ATS_Resume.pdf"
                   download="Nicole_Hall_ATS_Resume.pdf"
-                  className="w-full flex items-center gap-4 p-5 border-2 border-black hover:bg-black hover:text-white transition-colors"
+                  className="w-full flex items-center gap-4 p-5 border-2 border-white/20 bg-black hover:bg-white/5 transition-colors"
                 >
-                  <div className="text-2xl">↓</div>
+                  <div className="text-2xl text-purple-400">↓</div>
                   <div className="text-left">
-                    <p className="font-semibold">Resume (ATS)</p>
-                    <p className="text-sm opacity-60">Download ATS-friendly version</p>
+                    <p className="font-semibold text-white font-mono">Resume (ATS)</p>
+                    <p className="text-sm text-gray-400 font-mono">Download ATS-friendly version</p>
                   </div>
                 </a>
               </div>

@@ -10,13 +10,13 @@ const About = () => {
       </Helmet>
 
       <div className="min-h-screen pt-16">
-        <div className="flex min-h-screen">
+
+        <div className="flex min-h-screen border-t-2 border-white/20">
           {/* Left Side - Black - Marketing */}
-          <div className="w-1/2 bg-black text-white p-16 relative overflow-hidden">
-            {/* Subtle color accent - top left corner */}
-            <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-gradient-to-br from-purple-400/65 to-transparent blur-lg"></div>
+          <div className="w-1/2 bg-black text-white p-16 relative border-r-2 border-white/20">
             <div className="max-w-xl relative z-10">
-              <h2 className="text-4xl font-black uppercase mb-8">Marketing</h2>
+              <p className="text-green-400 font-mono text-sm mb-2">$ cat /skills/marketing.sh</p>
+              <h2 className="text-4xl font-black uppercase mb-8 font-mono text-cyan-400">./MARKETING</h2>
 
               <div className="space-y-12">
                 <div>
@@ -51,11 +51,10 @@ const About = () => {
           </div>
 
           {/* Right Side - White - Engineering */}
-          <div className="w-1/2 bg-white text-black p-16 relative overflow-hidden">
-            {/* Subtle color accent - bottom right corner */}
-            <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gradient-to-tl from-cyan-400/70 to-transparent blur-lg"></div>
+          <div className="w-1/2 bg-white text-black p-16 relative">
             <div className="max-w-xl relative z-10">
-              <h2 className="text-4xl font-black uppercase mb-8">Engineering</h2>
+              <p className="text-purple-600 font-mono text-sm mb-2">$ ls -la /skills/engineer/</p>
+              <h2 className="text-4xl font-black uppercase mb-8 font-mono text-purple-600">./ENGINEER</h2>
 
               <div className="space-y-12">
                 <div>

@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet';
+import TerminalWindow from '@/components/TerminalWindow';
 
 const Home = () => {
   return (
@@ -10,18 +11,18 @@ const Home = () => {
       </Helmet>
 
       <div className="pt-16">
+
         {/* Definition Section at Top */}
-        <div className="relative bg-white border-b border-black py-8 md:py-12 overflow-hidden">
-          {/* Subtle color accent - top right */}
-          <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-pink-400/70 to-transparent blur-lg"></div>
+        <div className="relative bg-black border-b-2 border-white/20 py-8 md:py-12">
           <div className="text-center px-6 md:px-12 relative z-10">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter uppercase mb-2">
-              Marketing Engineer
+            <p className="text-green-400 font-mono text-sm mb-4">$ whoami</p>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter uppercase mb-2 text-white font-mono">
+              &gt; MARKETING_ENGINEER
             </h1>
-            <p className="text-sm md:text-lg text-gray-600 font-mono mb-1">
+            <p className="text-sm md:text-lg text-cyan-400 font-mono mb-1">
               /ˈmärkədiNG ˌenjəˈnir/ n.
             </p>
-            <p className="text-lg md:text-xl lg:text-2xl text-black max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-mono">
               A person fluent in human persuasion and machine logic. Designs systems that turn ideas into measurable growth.
             </p>
           </div>
@@ -30,9 +31,10 @@ const Home = () => {
         {/* Split Section with Content from About */}
         <div className="flex flex-col md:flex-row relative">
           {/* Left Side - Black - Marketing */}
-          <div className="w-full md:w-1/2 bg-black text-white p-8 md:p-16 flex items-center justify-center">
+          <div className="w-full md:w-1/2 bg-black text-white p-8 md:p-16 flex items-center justify-center border-r-2 border-white/20">
             <div className="max-w-xl">
-              <h2 className="text-3xl md:text-4xl font-black uppercase mb-8">Marketing</h2>
+              <p className="text-green-400 font-mono text-sm mb-2">$ cat marketing.txt</p>
+              <h2 className="text-3xl md:text-4xl font-black uppercase mb-8 font-mono text-cyan-400">./MARKETING</h2>
 
               <div className="space-y-8 md:space-y-12">
                 <div>
@@ -69,7 +71,8 @@ const Home = () => {
           {/* Right Side - White - Engineer */}
           <div className="w-full md:w-1/2 bg-white text-black p-8 md:p-16 flex items-center justify-center">
             <div className="max-w-xl">
-              <h2 className="text-3xl md:text-4xl font-black uppercase mb-8">Engineer</h2>
+              <p className="text-purple-600 font-mono text-sm mb-2">$ ls -la engineer/</p>
+              <h2 className="text-3xl md:text-4xl font-black uppercase mb-8 font-mono text-purple-600">./ENGINEER</h2>
 
               <div className="space-y-8 md:space-y-12">
                 <div>
@@ -108,15 +111,15 @@ const Home = () => {
         </div>
 
         {/* About Me Section */}
-        <div className="bg-white border-t-2 border-black relative overflow-hidden">
-          {/* Subtle color accent - bottom left */}
-          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-blue-400/70 to-transparent blur-lg"></div>
-          <div className="max-w-4xl mx-auto p-8 md:p-16 relative z-10">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black uppercase tracking-tighter mb-8 md:mb-12 text-center">
-              About Me
-            </h2>
+        <div className="bg-gray-900 border-t-2 border-white/20 relative">
+          <div className="max-w-5xl mx-auto p-8 md:p-16 relative z-10">
+            <TerminalWindow title="nicole@portfolio ~ % cat about.md">
+              <p className="text-green-400 text-sm mb-4">$ ./read_bio.sh</p>
+              <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-tight mb-6 text-cyan-400">
+                &gt; ABOUT_ME.txt
+              </h2>
 
-            <div className="space-y-4 md:space-y-6 text-base md:text-lg leading-relaxed">
+              <div className="space-y-4 md:space-y-6 text-sm md:text-base leading-relaxed text-gray-300">
               <p>
                 I'm Nicole Hall, a marketing strategist who somehow turned a messy life into a career that thrives on untangling other people's messes. Cute, right?
               </p>
@@ -141,10 +144,12 @@ const Home = () => {
                 Here's the deal. If you work with me, you'll get honesty, stubborn commitment, clever strategy, and a sense of humor that somehow survived everything. I believe progress beats perfection every time. And yes, coffee keeps the whole operation running.
               </p>
 
-              <p className="font-bold text-lg md:text-xl">
-                So that's me. Resilient. Strategic. Slightly feral. Let's build cool things anyway.
+              <p className="font-bold text-base md:text-lg text-green-400">
+                <span className="text-yellow-400">$</span> echo "So that's me. Resilient. Strategic. Slightly feral. Let's build cool things anyway."
               </p>
-            </div>
+              <p className="text-green-400 text-sm mt-6">✓ Process completed successfully</p>
+              </div>
+            </TerminalWindow>
           </div>
         </div>
       </div>

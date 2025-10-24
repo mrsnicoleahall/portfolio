@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet';
 import { useState } from 'react';
 import ProofCard from '@/components/ProofCard';
+import TerminalWindow from '@/components/TerminalWindow';
 import caseStudiesData from '@/data/case-studies.json';
 
 const Skills = () => {
@@ -10,6 +11,7 @@ const Skills = () => {
   const filteredCases = filter === 'All'
     ? caseStudiesData
     : caseStudiesData.filter(cs => cs.type === filter);
+
 
   const marketingSkills = [
     { name: 'Brand Positioning', description: 'Defining unique market position and differentiation strategy' },
@@ -90,74 +92,77 @@ const Skills = () => {
       </Helmet>
 
       <div className="min-h-screen pt-16 bg-white">
+
         {/* Jump to Section Navigation */}
-        <div className="border-b-2 border-black bg-white sticky top-16 z-20">
+        <div className="border-b-2 border-white/20 bg-black sticky top-16 z-20">
           <div className="max-w-7xl mx-auto px-8 py-4">
             <div className="flex justify-center gap-4 flex-wrap">
               <a
                 href="#proof"
-                className="px-4 py-2 text-sm font-semibold uppercase tracking-wide border-2 border-black bg-white text-black hover:bg-gray-100 transition-colors"
+                className="px-4 py-2 text-sm font-mono font-semibold uppercase tracking-wide border-2 border-green-400 bg-black text-green-400 hover:bg-green-400 hover:text-black transition-colors"
               >
-                Proof
+                $ Proof
               </a>
               <a
                 href="#skills"
-                className="px-4 py-2 text-sm font-semibold uppercase tracking-wide border-2 border-black bg-white text-black hover:bg-gray-100 transition-colors"
+                className="px-4 py-2 text-sm font-mono font-semibold uppercase tracking-wide border-2 border-cyan-400 bg-black text-cyan-400 hover:bg-cyan-400 hover:text-black transition-colors"
               >
-                Skills
+                $ Skills
               </a>
               <a
                 href="#examples"
-                className="px-4 py-2 text-sm font-semibold uppercase tracking-wide border-2 border-black bg-white text-black hover:bg-gray-100 transition-colors"
+                className="px-4 py-2 text-sm font-mono font-semibold uppercase tracking-wide border-2 border-purple-400 bg-black text-purple-400 hover:bg-purple-400 hover:text-black transition-colors"
               >
-                Examples
+                $ Examples
               </a>
             </div>
           </div>
         </div>
 
         {/* Proof Section - Now First */}
-        <div id="proof" className="max-w-7xl mx-auto p-8 md:p-16 scroll-mt-32 relative">
-          {/* Subtle color accent - top right */}
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-yellow-400/75 to-transparent blur-lg -z-10"></div>
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-4">
-              Proof
-            </h1>
-            <p className="text-lg md:text-xl text-gray-600">Real results from real projects</p>
-          </div>
+        <div id="proof" className="scroll-mt-32 relative bg-gray-900 border-y-2 border-white/20 py-16">
+          <div className="max-w-7xl mx-auto px-8">
+            <div className="text-center mb-12">
+              <p className="text-green-400 font-mono text-sm mb-2">$ cat case_studies.json</p>
+              <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-4 font-mono text-green-400">
+                &gt; PROOF
+              </h1>
+              <p className="text-lg md:text-xl text-gray-300 font-mono">Real results from real projects</p>
+            </div>
 
           <div className="flex justify-center gap-2 mb-12 flex-wrap">
             {filters.map(f => (
               <button
                 key={f}
                 onClick={() => setFilter(f)}
-                className={`px-4 py-2 text-sm font-semibold uppercase tracking-wide border-2 border-black ${
+                className={`px-4 py-2 text-sm font-mono font-semibold uppercase tracking-wide border-2 transition-colors ${
                   filter === f
-                    ? 'bg-black text-white'
-                    : 'bg-white text-black hover:bg-gray-100'
+                    ? 'bg-green-400 text-black border-green-400'
+                    : 'bg-black text-green-400 border-green-400 hover:bg-green-400 hover:text-black'
                 }`}
               >
-                {f}
+                $ {f}
               </button>
             ))}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredCases.map((caseStudy) => (
               <ProofCard key={caseStudy.slug} caseStudy={caseStudy} />
             ))}
           </div>
+          </div>
         </div>
 
         {/* Skills Section */}
-        <div id="skills" className="border-t-2 border-black scroll-mt-32 relative overflow-hidden">
-          {/* Subtle color accent - center left */}
-          <div className="absolute top-1/2 left-0 w-[600px] h-[600px] bg-gradient-to-r from-green-400/70 to-transparent blur-lg"></div>
+        <div id="skills" className="border-t-2 border-white/20 scroll-mt-32 relative bg-black/40 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto p-8 md:p-16 relative z-10">
-            <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-16 text-center">
-              Skills
-            </h1>
+            <div className="text-center mb-16">
+              <p className="text-cyan-400 font-mono text-sm mb-2">$ npm run show-skills</p>
+              <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-cyan-400 font-mono">
+                &gt; SKILLS_MATRIX
+              </h1>
+            </div>
 
             <div className="grid md:grid-cols-2 gap-12 md:gap-16 mb-16">
               {/* Marketing Skills */}
@@ -202,21 +207,22 @@ const Skills = () => {
         </div>
 
         {/* Examples Section */}
-        <div id="examples" className="border-t-2 border-black bg-gray-50 scroll-mt-32 relative overflow-hidden">
-          {/* Subtle color accent - bottom right */}
-          <div className="absolute bottom-0 right-0 w-[700px] h-[700px] bg-gradient-to-tl from-purple-400/70 to-transparent blur-lg"></div>
+        <div id="examples" className="border-t-2 border-white/20 bg-gray-900/70 backdrop-blur-sm scroll-mt-32 relative">
           <div className="max-w-7xl mx-auto p-8 md:p-16 relative z-10">
-            <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-12 text-center">
-              Examples
-            </h1>
+            <div className="text-center mb-12">
+              <p className="text-purple-400 font-mono text-sm mb-2">$ ls examples/</p>
+              <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-purple-400 font-mono">
+                &gt; EXAMPLES
+              </h1>
+            </div>
 
             <div className="space-y-12">
               {/* Marketing Ethos and Approach */}
               <div>
-                <h2 className="text-2xl md:text-3xl font-black uppercase mb-4">
-                  Marketing Ethos and Approach
+                <h2 className="text-2xl md:text-3xl font-black uppercase mb-4 text-green-400 font-mono">
+                  $ Marketing Ethos and Approach
                 </h2>
-                <p className="text-gray-700 mb-6 leading-relaxed">
+                <p className="text-gray-300 mb-6 leading-relaxed">
                   These resources highlight how I think about marketing at both a strategic and executional level, from frameworks to audience insights to campaign delivery.
                 </p>
                 <ul className="space-y-3">
@@ -249,10 +255,10 @@ const Skills = () => {
 
               {/* Writing and Content Samples */}
               <div>
-                <h2 className="text-2xl md:text-3xl font-black uppercase mb-4">
-                  Writing and Content Samples
+                <h2 className="text-2xl md:text-3xl font-black uppercase mb-4 text-cyan-400 font-mono">
+                  $ Writing and Content Samples
                 </h2>
-                <p className="text-gray-700 mb-6 leading-relaxed">
+                <p className="text-gray-300 mb-6 leading-relaxed">
                   To give you a sense of my writing style and approach to marketing communication, here are a few examples of my published work:
                 </p>
                 <ul className="space-y-3">
@@ -285,10 +291,10 @@ const Skills = () => {
 
               {/* Branding and Design Work */}
               <div>
-                <h2 className="text-2xl md:text-3xl font-black uppercase mb-4">
-                  Branding and Design Work
+                <h2 className="text-2xl md:text-3xl font-black uppercase mb-4 text-yellow-400 font-mono">
+                  $ Branding and Design Work
                 </h2>
-                <p className="text-gray-700 mb-6 leading-relaxed">
+                <p className="text-gray-300 mb-6 leading-relaxed">
                   These projects showcase my ability to create cohesive brand identities that align with strategy and audience.
                 </p>
                 <ul className="space-y-3 mb-6">
@@ -305,8 +311,8 @@ const Skills = () => {
                     </a>
                   </li>
                 </ul>
-                <h3 className="text-xl md:text-2xl font-black uppercase mb-4 mt-8">
-                  Site Examples
+                <h3 className="text-xl md:text-2xl font-black uppercase mb-4 mt-8 text-orange-400 font-mono">
+                  $ Site Examples
                 </h3>
                 <div className="flex flex-wrap gap-4">
                   <a href="https://wtfareu.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">
