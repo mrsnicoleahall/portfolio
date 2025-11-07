@@ -31,36 +31,57 @@ const Home = () => {
         {/* Split Section with Content from About */}
         <div className="flex flex-col md:flex-row relative">
           {/* Left Side - Black - Marketing */}
-          <div className="w-full md:w-1/2 bg-black text-white p-8 md:p-16 flex items-center justify-center border-r-2 border-white/20">
-            <div className="max-w-xl">
-              <p className="text-green-400 font-mono text-sm mb-2">$ cat marketing.txt</p>
-              <h2 className="text-3xl md:text-4xl font-black uppercase mb-8 font-mono text-cyan-400">./MARKETING</h2>
+          <div className="w-full md:w-1/2 bg-gradient-to-br from-pink-50 via-purple-50 to-orange-50 text-gray-900 p-8 md:p-16 flex items-center justify-center border-r-2 border-pink-200 relative overflow-hidden">
+            {/* Creative Background Pattern */}
+            <div className="absolute inset-0 opacity-25 pointer-events-none">
+              <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <filter id="watercolor-home">
+                    <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="4" result="noise"/>
+                    <feDisplacementMap in="SourceGraphic" in2="noise" scale="12" />
+                  </filter>
+                </defs>
+                <ellipse cx="15%" cy="25%" rx="120" ry="100" fill="#ec4899" opacity="0.2" filter="url(#watercolor-home)" />
+                <ellipse cx="80%" cy="20%" rx="90" ry="110" fill="#a855f7" opacity="0.18" filter="url(#watercolor-home)" />
+                <ellipse cx="70%" cy="75%" rx="100" ry="85" fill="#f97316" opacity="0.22" filter="url(#watercolor-home)" />
+                <ellipse cx="25%" cy="80%" rx="80" ry="95" fill="#fbbf24" opacity="0.15" filter="url(#watercolor-home)" />
+                <circle cx="50%" cy="45%" r="70" fill="#ec4899" opacity="0.12" filter="url(#watercolor-home)" />
+              </svg>
+            </div>
+
+            {/* Decorative paint splotches */}
+            <div className="absolute top-10 left-10 w-32 h-32 bg-pink-300/40 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-10 w-40 h-40 bg-purple-300/40 rounded-full blur-3xl"></div>
+            <div className="absolute top-1/2 right-1/4 w-24 h-24 bg-yellow-300/40 rounded-full blur-2xl"></div>
+
+            <div className="max-w-xl relative z-10">
+              <h2 className="text-3xl md:text-4xl font-black uppercase mb-8 text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600">Marketing</h2>
 
               <div className="space-y-8 md:space-y-12">
                 <div>
-                  <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4">Strategy & Positioning</h3>
-                  <p className="text-gray-300 leading-relaxed">
+                  <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4 text-pink-700">Strategy & Positioning</h3>
+                  <p className="text-gray-700 leading-relaxed">
                     Defining core value propositions and market differentiation. Mapping audience psychology and pain points that drive action.
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4">Copywriting & Content</h3>
-                  <p className="text-gray-300 leading-relaxed">
+                  <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4 text-purple-700">Copywriting & Content</h3>
+                  <p className="text-gray-700 leading-relaxed">
                     Writing headlines that stop the scroll. Crafting landing page copy that converts cold traffic. Every word earns its place.
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4">Brand & Design</h3>
-                  <p className="text-gray-300 leading-relaxed">
+                  <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4 text-orange-700">Brand & Design</h3>
+                  <p className="text-gray-700 leading-relaxed">
                     Creating visual identities that communicate positioning. Designing interfaces that guide users naturally toward conversion.
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4">Campaign Development</h3>
-                  <p className="text-gray-300 leading-relaxed">
+                  <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4 text-pink-700">Campaign Development</h3>
+                  <p className="text-gray-700 leading-relaxed">
                     Developing creative concepts that cut through noise. Building lifecycle flows that nurture leads through automation.
                   </p>
                 </div>

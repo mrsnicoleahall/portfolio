@@ -9,9 +9,6 @@ import { toast } from '@/components/ui/use-toast';
 const Downloads = () => {
   const downloads = [
     {
-      title: "Resume (PDF)",
-    },
-    {
       title: "Manager Manual (PDF)",
     }
   ];
