@@ -155,12 +155,28 @@ const Skills = () => {
         </div>
 
         {/* Skills Section */}
-        <div id="skills" className="border-t-2 border-white/20 scroll-mt-32 relative bg-white">
+        <div id="skills" className="border-t-2 border-white/20 scroll-mt-32 relative bg-gradient-to-br from-pink-50 via-purple-50 to-orange-50 overflow-hidden">
+          {/* Creative Background Pattern */}
+          <div className="absolute inset-0 opacity-20 pointer-events-none">
+            <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="watercolor-skills">
+                  <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="5" result="noise"/>
+                  <feDisplacementMap in="SourceGraphic" in2="noise" scale="15" />
+                </filter>
+              </defs>
+              <ellipse cx="10%" cy="15%" rx="150" ry="120" fill="#ec4899" opacity="0.2" filter="url(#watercolor-skills)" />
+              <ellipse cx="85%" cy="25%" rx="130" ry="140" fill="#a855f7" opacity="0.18" filter="url(#watercolor-skills)" />
+              <ellipse cx="75%" cy="80%" rx="140" ry="110" fill="#f97316" opacity="0.22" filter="url(#watercolor-skills)" />
+              <ellipse cx="20%" cy="85%" rx="110" ry="125" fill="#fbbf24" opacity="0.15" filter="url(#watercolor-skills)" />
+              <circle cx="50%" cy="50%" r="100" fill="#ec4899" opacity="0.12" filter="url(#watercolor-skills)" />
+            </svg>
+          </div>
+
           <div className="max-w-7xl mx-auto p-8 md:p-16 relative z-10">
             <div className="text-center mb-16">
-              <p className="text-gray-500 font-mono text-sm mb-2">$ npm run show-skills</p>
-              <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-black font-mono">
-                &gt; SKILLS_MATRIX
+              <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-pink-600 via-purple-600 to-orange-600">
+                Skills Matrix
               </h1>
             </div>
 
@@ -168,19 +184,19 @@ const Skills = () => {
               {/* Marketing Skills */}
               <div>
                 <div className="mb-6">
-                  <h2 className="text-3xl font-black uppercase text-black mb-2">Marketing</h2>
-                  <div className="h-1 w-20 bg-cyan-400"></div>
+                  <h2 className="text-3xl font-black uppercase text-pink-700 mb-2">Marketing</h2>
+                  <div className="h-1 w-20 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full"></div>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {marketingSkills.map((skill, idx) => (
                     <div
                       key={idx}
-                      className="text-sm font-semibold text-black bg-gray-50 p-3 relative group cursor-help border border-gray-200 hover:border-cyan-400 hover:shadow-md transition-all"
+                      className="text-sm font-semibold text-gray-900 bg-white/60 backdrop-blur-sm p-3 relative group cursor-help border-2 border-pink-200 hover:border-pink-400 hover:shadow-lg transition-all rounded-lg"
                     >
                       {skill.name}
-                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-4 py-3 bg-white text-slate-900 text-xs font-normal leading-relaxed w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10 shadow-xl rounded-lg border border-gray-200">
+                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-4 py-3 bg-white text-slate-900 text-xs font-normal leading-relaxed w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10 shadow-xl rounded-lg border-2 border-pink-300">
                         {skill.description}
-                        <div className="absolute top-full left-1/2 transform -translate-x-1/2 -mt-1 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-gray-200"></div>
+                        <div className="absolute top-full left-1/2 transform -translate-x-1/2 -mt-1 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-pink-300"></div>
                       </div>
                     </div>
                   ))}
@@ -190,19 +206,19 @@ const Skills = () => {
               {/* Engineering Skills */}
               <div>
                 <div className="mb-6">
-                  <h2 className="text-3xl font-black uppercase text-black mb-2">Engineer</h2>
-                  <div className="h-1 w-20 bg-purple-400"></div>
+                  <h2 className="text-3xl font-black uppercase text-purple-700 mb-2">Engineer</h2>
+                  <div className="h-1 w-20 bg-gradient-to-r from-purple-400 to-orange-400 rounded-full"></div>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {engineeringSkills.map((skill, idx) => (
                     <div
                       key={idx}
-                      className="text-sm font-semibold text-black bg-gray-50 p-3 relative group cursor-help border border-gray-200 hover:border-purple-400 hover:shadow-md transition-all"
+                      className="text-sm font-semibold text-gray-900 bg-white/60 backdrop-blur-sm p-3 relative group cursor-help border-2 border-purple-200 hover:border-purple-400 hover:shadow-lg transition-all rounded-lg"
                     >
                       {skill.name}
-                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-4 py-3 bg-white text-slate-900 text-xs font-normal leading-relaxed w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10 shadow-xl rounded-lg border border-gray-200">
+                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-4 py-3 bg-white text-slate-900 text-xs font-normal leading-relaxed w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10 shadow-xl rounded-lg border-2 border-purple-300">
                         {skill.description}
-                        <div className="absolute top-full left-1/2 transform -translate-x-1/2 -mt-1 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-gray-200"></div>
+                        <div className="absolute top-full left-1/2 transform -translate-x-1/2 -mt-1 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-purple-300"></div>
                       </div>
                     </div>
                   ))}

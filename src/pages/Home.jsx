@@ -131,46 +131,86 @@ const Home = () => {
           <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gray-500"></div>
         </div>
 
-        {/* About Me Section */}
-        <div className="bg-gray-900 border-t-2 border-white/20 relative">
-          <div className="max-w-5xl mx-auto p-8 md:p-16 relative z-10">
-            <TerminalWindow title="nicole@portfolio ~ % cat about.md">
-              <p className="text-green-400 text-sm mb-4">$ ./read_bio.sh</p>
-              <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-tight mb-6 text-cyan-400">
-                &gt; ABOUT_ME.txt
+        {/* About Me Section - Split Design */}
+        <div className="flex flex-col md:flex-row relative border-t-2 border-white/20">
+          {/* Creative Side - Left */}
+          <div className="w-full md:w-1/2 bg-gradient-to-br from-pink-50 via-purple-50 to-orange-50 text-gray-900 p-8 md:p-16 relative overflow-hidden border-r-2 border-pink-200">
+            {/* Creative Background Pattern */}
+            <div className="absolute inset-0 opacity-25 pointer-events-none">
+              <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <filter id="watercolor-bio">
+                    <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="4" result="noise"/>
+                    <feDisplacementMap in="SourceGraphic" in2="noise" scale="12" />
+                  </filter>
+                </defs>
+                <ellipse cx="15%" cy="25%" rx="100" ry="80" fill="#ec4899" opacity="0.2" filter="url(#watercolor-bio)" />
+                <ellipse cx="80%" cy="20%" rx="70" ry="90" fill="#a855f7" opacity="0.18" filter="url(#watercolor-bio)" />
+                <ellipse cx="70%" cy="75%" rx="85" ry="70" fill="#f97316" opacity="0.22" filter="url(#watercolor-bio)" />
+                <circle cx="30%" cy="50%" r="60" fill="#fbbf24" opacity="0.15" filter="url(#watercolor-bio)" />
+              </svg>
+            </div>
+
+            <div className="relative z-10 max-w-xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-black uppercase mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600">
+                About Me
               </h2>
 
-              <div className="space-y-4 md:space-y-6 text-sm md:text-base leading-relaxed text-gray-300">
-              <p>
-                I'm Nicole Hall, a marketing strategist who somehow turned a messy life into a career that thrives on untangling other people's messes. Cute, right?
-              </p>
+              <div className="space-y-4 md:space-y-5 text-sm md:text-base leading-relaxed text-gray-800">
+                <p>
+                  I'm Nicole Hall, a marketing strategist who somehow turned a messy life into a career that thrives on untangling other people's messes. Cute, right?
+                </p>
 
-              <p>
-                I've spent more than two decades helping businesses figure out why their marketing is broken, then fixing it so they stop throwing money into the digital void. I ask the hard questions like "Why are we doing this?" and "Who approved this?" and "Did we really think Comic Sans was the answer?" My job is to turn chaos into strategy and chaos into growth and, occasionally, chaos into a polite email with bullet points.
-              </p>
+                <p>
+                  I've spent more than two decades helping businesses figure out why their marketing is broken, then fixing it so they stop throwing money into the digital void. I ask the hard questions like "Why are we doing this?" and "Who approved this?" and "Did we really think Comic Sans was the answer?"
+                </p>
 
-              <p>
-                My path here wasn't exactly a storybook climb up the corporate ladder. More like the ladder was missing rungs, on fire, and sometimes being used as a baseball bat. I faced addiction, trauma, detours, and the kind of plot twists that make people lean in and whisper "wait… what happened next?" But here's the thrilling part: I didn't just survive it, I learned from it. Turns out resilience makes a great superpower, right after sarcasm.
-              </p>
-
-              <p>
-                That winding road taught me how to rebuild. A life. A business. A marketing plan that doesn't make everyone hate their job. I care about results that actually matter and strategies that don't make people want to crawl under their desk. I believe marketing is about telling the truth in a way people want to hear. Groundbreaking, I know.
-              </p>
-
-              <p>
-                Professionally speaking, I've led teams, built brands from scratch, launched campaigns that actually worked, and helped companies make friends with data instead of crying about it. I'm obsessed with clarity, allergic to buzzwords, and known to roll my eyes at "synergy" more than medically recommended.
-              </p>
-
-              <p>
-                Here's the deal. If you work with me, you'll get honesty, stubborn commitment, clever strategy, and a sense of humor that somehow survived everything. I believe progress beats perfection every time. And yes, coffee keeps the whole operation running.
-              </p>
-
-              <p className="font-bold text-base md:text-lg text-green-400">
-                <span className="text-yellow-400">$</span> echo "So that's me. Resilient. Strategic. Slightly feral. Let's build cool things anyway."
-              </p>
-              <p className="text-green-400 text-sm mt-6">✓ Process completed successfully</p>
+                <p>
+                  My path here wasn't exactly a storybook climb up the corporate ladder. More like the ladder was missing rungs, on fire, and sometimes being used as a baseball bat. I faced trauma, detours, and the kind of plot twists that make people lean in and whisper "wait… what happened next?" But here's the thrilling part: I didn't just survive it, I learned from it.
+                </p>
               </div>
-            </TerminalWindow>
+            </div>
+          </div>
+
+          {/* Technical Side - Right */}
+          <div className="w-full md:w-1/2 bg-gray-900 text-white p-8 md:p-16 relative">
+            <div className="relative z-10 max-w-xl mx-auto">
+              <div className="border-2 border-white/20 bg-black">
+                {/* Terminal Header */}
+                <div className="flex items-center gap-3 px-4 py-3 border-b border-white/20">
+                  <div className="flex gap-1.5">
+                    <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                  </div>
+                  <span className="text-xs text-white/60 font-mono">nicole@portfolio ~ %</span>
+                </div>
+
+                {/* Terminal Content */}
+                <div className="p-6">
+                  <p className="text-green-400 text-sm mb-4 font-mono">$ cat about_continued.txt</p>
+
+                  <div className="space-y-4 md:space-y-5 text-sm md:text-base leading-relaxed text-gray-300">
+                    <p>
+                      That winding road taught me how to rebuild. A life. A business. A marketing plan that doesn't make everyone hate their job. I care about results that actually matter and strategies that don't make people want to crawl under their desk.
+                    </p>
+
+                    <p>
+                      Professionally speaking, I've led teams, built brands from scratch, launched campaigns that actually worked, and helped companies make friends with data instead of crying about it. I'm obsessed with clarity, allergic to buzzwords, and known to roll my eyes at "synergy" more than medically recommended.
+                    </p>
+
+                    <p>
+                      Here's the deal. If you work with me, you'll get honesty, stubborn commitment, clever strategy, and a sense of humor that somehow survived everything. I believe progress beats perfection every time. And yes, coffee keeps the whole operation running.
+                    </p>
+
+                    <p className="font-bold text-base md:text-lg text-green-400 font-mono">
+                      <span className="text-yellow-400">$</span> echo "So that's me. Resilient. Strategic. Slightly feral. Let's build cool things anyway."
+                    </p>
+                    <p className="text-green-400 text-sm mt-6 font-mono">✓ Process completed successfully</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
