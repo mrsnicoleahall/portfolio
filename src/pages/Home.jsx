@@ -12,50 +12,6 @@ const Home = () => {
 
       <div className="pt-16">
 
-        {/* Definition Section - Hybrid Split Design */}
-        <div className="w-full flex flex-col md:flex-row border-b-2 border-white/20">
-          {/* Left Side - Marketing (Creative) */}
-          <div className="w-full md:w-1/2 bg-gradient-to-br from-pink-50 via-purple-50 to-orange-50 py-12 px-6 md:px-8 border-r-2 border-pink-200 relative overflow-hidden">
-            {/* Creative Background Pattern */}
-            <div className="absolute inset-0 opacity-20 pointer-events-none">
-              <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <filter id="watercolor-def">
-                    <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="4" result="noise"/>
-                    <feDisplacementMap in="SourceGraphic" in2="noise" scale="10" />
-                  </filter>
-                </defs>
-                <ellipse cx="30%" cy="50%" rx="100" ry="80" fill="#ec4899" opacity="0.3" filter="url(#watercolor-def)" />
-                <ellipse cx="70%" cy="40%" rx="80" ry="95" fill="#a855f7" opacity="0.25" filter="url(#watercolor-def)" />
-              </svg>
-            </div>
-
-            <div className="max-w-xl mx-auto relative z-10">
-              <h1 className="text-2xl md:text-3xl font-black uppercase text-transparent bg-clip-text bg-gradient-to-r from-pink-600 via-purple-600 to-orange-600 mb-3">
-                Marketing
-              </h1>
-              <p className="text-gray-700 leading-relaxed">
-                Human persuasion. Creative concepts. Stories that resonate and convert.
-              </p>
-            </div>
-          </div>
-
-          {/* Right Side - Engineer (Technical) */}
-          <div className="w-full md:w-1/2 bg-black text-white py-12 px-6 md:px-8">
-            <div className="max-w-xl mx-auto">
-              <h1 className="text-2xl md:text-3xl font-black uppercase text-cyan-400 mb-3 font-mono">
-                Engineer
-              </h1>
-              <p className="text-gray-300 leading-relaxed font-mono">
-                Machine logic. Systems that scale. Code that turns ideas into growth.
-              </p>
-            </div>
-          </div>
-
-          {/* Center Divider */}
-          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-pink-200 via-purple-500 to-cyan-400"></div>
-        </div>
-
         {/* Dictionary Definition - Hybrid Style */}
         <div className="w-full relative border-b-2 border-white/20">
           {/* Split background */}
@@ -97,6 +53,50 @@ const Home = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Marketing/Engineer Labels - Split Design */}
+        <div className="w-full flex flex-col md:flex-row border-b-2 border-white/20">
+          {/* Left Side - Marketing (Creative) */}
+          <div className="w-full md:w-1/2 bg-gradient-to-br from-pink-50 via-purple-50 to-orange-50 py-12 px-6 md:px-8 border-r-2 border-pink-200 relative overflow-hidden">
+            {/* Creative Background Pattern */}
+            <div className="absolute inset-0 opacity-20 pointer-events-none">
+              <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <filter id="watercolor-labels">
+                    <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="4" result="noise"/>
+                    <feDisplacementMap in="SourceGraphic" in2="noise" scale="10" />
+                  </filter>
+                </defs>
+                <ellipse cx="30%" cy="50%" rx="100" ry="80" fill="#ec4899" opacity="0.3" filter="url(#watercolor-labels)" />
+                <ellipse cx="70%" cy="40%" rx="80" ry="95" fill="#a855f7" opacity="0.25" filter="url(#watercolor-labels)" />
+              </svg>
+            </div>
+
+            <div className="max-w-xl mx-auto relative z-10">
+              <h1 className="text-2xl md:text-3xl font-black uppercase text-transparent bg-clip-text bg-gradient-to-r from-pink-600 via-purple-600 to-orange-600 mb-3">
+                Marketing
+              </h1>
+              <p className="text-gray-700 leading-relaxed">
+                Human persuasion. Creative concepts. Stories that resonate and convert.
+              </p>
+            </div>
+          </div>
+
+          {/* Right Side - Engineer (Technical) */}
+          <div className="w-full md:w-1/2 bg-black text-white py-12 px-6 md:px-8">
+            <div className="max-w-xl mx-auto">
+              <h1 className="text-2xl md:text-3xl font-black uppercase text-cyan-400 mb-3 font-mono">
+                Engineer
+              </h1>
+              <p className="text-gray-300 leading-relaxed font-mono">
+                Machine logic. Systems that scale. Code that turns ideas into growth.
+              </p>
+            </div>
+          </div>
+
+          {/* Center Divider */}
+          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-pink-200 via-purple-500 to-cyan-400"></div>
         </div>
 
         {/* Split Section with Content from About */}
