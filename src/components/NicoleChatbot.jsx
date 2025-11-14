@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import { Send } from 'lucide-react';
 
 const NicoleChatbot = () => {
@@ -11,14 +11,6 @@ const NicoleChatbot = () => {
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
-
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  useEffect(() => {
-    scrollToBottom();
-  }, [messages]);
 
   const marketingSkills = [
     'Brand Positioning', 'Messaging Strategy', 'Audience Research', 'Campaign Strategy',
