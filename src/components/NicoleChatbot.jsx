@@ -62,28 +62,33 @@ When asked about her skills, provide specific, helpful information about what sh
     setIsLoading(true);
 
     try {
-      const response = await fetch('https://api.openai.com/v1/chat/completions', {
+      // Use Cloudflare Worker proxy instead of direct OpenAI API call
+      const workerUrl = import.meta.env.VITE_CLOUDFLARE_WORKER_URL || 'YOUR_WORKER_URL_HERE';
+
+      const response = await fetch(workerUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`
         },
         body: JSON.stringify({
-          model: 'gpt-3.5-turbo',
           messages: [
             { role: 'system', content: systemPrompt },
             ...messages,
             userMessage
-          ],
-          temperature: 0.7,
-          max_tokens: 300
+          ]
         })
       });
 
+      if (!response.ok) {
+        const errorData = await response.json();
+        console.error('API Error:', errorData);
+        throw new Error(errorData.error?.message || 'API request failed');
+      }
+
       const data = await response.json();
 
-      if (data.error) {
-        throw new Error(data.error.message || 'API request failed');
+      if (!data.choices || !data.choices[0]) {
+        throw new Error('Invalid API response');
       }
 
       const assistantMessage = {
@@ -94,9 +99,10 @@ When asked about her skills, provide specific, helpful information about what sh
       setMessages(prev => [...prev, assistantMessage]);
     } catch (error) {
       console.error('Error:', error);
+      const errorMessage = error.message || 'Unknown error occurred';
       setMessages(prev => [...prev, {
         role: 'assistant',
-        content: 'Sorry, I encountered an error. Please try again.'
+        content: `Sorry, I encountered an error: ${errorMessage}. Please check the console for details.`
       }]);
     } finally {
       setIsLoading(false);

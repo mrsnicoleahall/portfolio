@@ -12,30 +12,88 @@ const Home = () => {
 
       <div className="pt-16">
 
-        {/* Definition Section */}
-        <div className="w-full bg-black text-white py-12 px-6 border-b-2 border-white/20">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">Marketing Engineer</h1>
-            <p className="text-sm text-gray-400 italic mb-6">mar·kuh·ting en·juh·neer <span className="text-gray-500">noun</span></p>
+        {/* Definition Section - Hybrid Split Design */}
+        <div className="w-full flex flex-col md:flex-row border-b-2 border-white/20">
+          {/* Left Side - Marketing (Creative) */}
+          <div className="w-full md:w-1/2 bg-gradient-to-br from-pink-50 via-purple-50 to-orange-50 py-12 px-6 md:px-8 border-r-2 border-pink-200 relative overflow-hidden">
+            {/* Creative Background Pattern */}
+            <div className="absolute inset-0 opacity-20 pointer-events-none">
+              <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <filter id="watercolor-def">
+                    <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="4" result="noise"/>
+                    <feDisplacementMap in="SourceGraphic" in2="noise" scale="10" />
+                  </filter>
+                </defs>
+                <ellipse cx="30%" cy="50%" rx="100" ry="80" fill="#ec4899" opacity="0.3" filter="url(#watercolor-def)" />
+                <ellipse cx="70%" cy="40%" rx="80" ry="95" fill="#a855f7" opacity="0.25" filter="url(#watercolor-def)" />
+              </svg>
+            </div>
 
-            <div className="space-y-4 text-gray-300 text-sm md:text-base leading-relaxed">
-              <p>
-                A hybrid strategist who blends creative insight with technical skill to design, build, and optimize marketing systems that actually work instead of just looking clever in a Canva deck.
+            <div className="max-w-xl mx-auto relative z-10">
+              <h1 className="text-2xl md:text-3xl font-black uppercase text-transparent bg-clip-text bg-gradient-to-r from-pink-600 via-purple-600 to-orange-600 mb-3">
+                Marketing
+              </h1>
+              <p className="text-gray-700 leading-relaxed">
+                Human persuasion. Creative concepts. Stories that resonate and convert.
+              </p>
+            </div>
+          </div>
+
+          {/* Right Side - Engineer (Technical) */}
+          <div className="w-full md:w-1/2 bg-black text-white py-12 px-6 md:px-8">
+            <div className="max-w-xl mx-auto">
+              <h1 className="text-2xl md:text-3xl font-black uppercase text-cyan-400 mb-3 font-mono">
+                Engineer
+              </h1>
+              <p className="text-gray-300 leading-relaxed font-mono">
+                Machine logic. Systems that scale. Code that turns ideas into growth.
+              </p>
+            </div>
+          </div>
+
+          {/* Center Divider */}
+          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-pink-200 via-purple-500 to-cyan-400"></div>
+        </div>
+
+        {/* Dictionary Definition - Hybrid Style */}
+        <div className="w-full relative border-b-2 border-white/20">
+          {/* Split background */}
+          <div className="absolute inset-0 flex">
+            <div className="w-1/2 bg-gradient-to-br from-pink-50/50 via-purple-50/50 to-orange-50/50"></div>
+            <div className="w-1/2 bg-black"></div>
+          </div>
+
+          <div className="max-w-4xl mx-auto py-12 px-6 relative z-10">
+            <div className="bg-white/95 backdrop-blur-sm border-4 border-purple-400 rounded-lg p-8 shadow-2xl">
+              <h2 className="text-2xl md:text-3xl font-bold mb-2">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600">Marketing</span>
+                {' '}
+                <span className="text-cyan-600 font-mono">Engineer</span>
+              </h2>
+              <p className="text-sm text-gray-600 italic mb-6">
+                mar·kuh·ting en·juh·neer <span className="text-gray-500">noun</span>
               </p>
 
-              <p>
-                A practitioner who understands code, data, funnels, user behavior, automation, and brand narrative, then stitches them together into a scalable growth engine.
-              </p>
-
-              <p>
-                The person you call when you need someone who can architect the strategy, write the copy, fix the tracking, debug the CMS, rebuild the website, launch the ads, interpret the analytics, and explain it all without condescending or panicking.
-              </p>
-
-              <div className="pt-4 border-t border-white/20 mt-6">
-                <p className="text-gray-400 italic">
-                  <span className="text-cyan-400 font-semibold">Usage:</span><br/>
-                  "Instead of hiring five specialists who don't talk to each other, we hired a Marketing Engineer."
+              <div className="space-y-4 text-gray-800 text-sm md:text-base leading-relaxed">
+                <p>
+                  A hybrid strategist who blends creative insight with technical skill to design, build, and optimize marketing systems that actually work instead of just looking clever in a Canva deck.
                 </p>
+
+                <p>
+                  A practitioner who understands code, data, funnels, user behavior, automation, and brand narrative, then stitches them together into a scalable growth engine.
+                </p>
+
+                <p>
+                  The person you call when you need someone who can architect the strategy, write the copy, fix the tracking, debug the CMS, rebuild the website, launch the ads, interpret the analytics, and explain it all without condescending or panicking.
+                </p>
+
+                <div className="pt-4 border-t border-purple-200 mt-6">
+                  <p className="text-gray-700 italic">
+                    <span className="text-purple-700 font-semibold">Usage:</span><br/>
+                    "Instead of hiring five specialists who don't talk to each other, we hired a Marketing Engineer."
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -114,8 +172,6 @@ const Home = () => {
             <div className="absolute top-1/2 right-1/4 w-24 h-24 bg-yellow-300/40 rounded-full blur-2xl"></div>
 
             <div className="max-w-xl relative z-10">
-              <h2 className="text-3xl md:text-4xl font-black uppercase mb-8 text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600">Marketing</h2>
-
               <div className="space-y-8 md:space-y-12">
                 <div>
                   <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4 text-pink-700">Strategy & Positioning</h3>
@@ -151,9 +207,6 @@ const Home = () => {
           {/* Right Side - Dark - Engineer */}
           <div className="w-full md:w-1/2 bg-black text-white p-8 md:p-16 flex items-center justify-center">
             <div className="max-w-xl">
-              <p className="text-green-400 font-mono text-sm mb-2">$ ls -la engineer/</p>
-              <h2 className="text-3xl md:text-4xl font-black uppercase mb-8 font-mono text-cyan-400">./ENGINEER</h2>
-
               <div className="space-y-8 md:space-y-12">
                 <div>
                   <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4 text-cyan-400 font-mono">Full-Stack Development</h3>
