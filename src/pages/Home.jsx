@@ -99,52 +99,6 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Hero Section - Split Design */}
-        <div className="flex flex-col md:flex-row relative border-b-2 border-white/20">
-          {/* Creative Side - Left */}
-          <div className="w-full md:w-1/2 bg-gradient-to-br from-pink-50 via-purple-50 to-orange-50 text-gray-900 py-12 md:py-16 px-6 md:px-12 flex items-center justify-center relative overflow-hidden border-r-2 border-pink-200">
-            {/* Creative Background Pattern */}
-            <div className="absolute inset-0 opacity-20 pointer-events-none">
-              <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <filter id="watercolor-hero">
-                    <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="4" result="noise"/>
-                    <feDisplacementMap in="SourceGraphic" in2="noise" scale="10" />
-                  </filter>
-                </defs>
-                <ellipse cx="20%" cy="30%" rx="100" ry="80" fill="#ec4899" opacity="0.3" filter="url(#watercolor-hero)" />
-                <ellipse cx="75%" cy="25%" rx="80" ry="95" fill="#a855f7" opacity="0.25" filter="url(#watercolor-hero)" />
-                <circle cx="50%" cy="70%" r="70" fill="#f97316" opacity="0.28" filter="url(#watercolor-hero)" />
-              </svg>
-            </div>
-
-            <div className="text-center relative z-10 max-w-2xl">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight uppercase mb-3 text-transparent bg-clip-text bg-gradient-to-r from-pink-600 via-purple-600 to-orange-600">
-                Marketing
-              </h1>
-              <p className="text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed">
-                Human persuasion. Creative concepts. Stories that resonate and convert.
-              </p>
-            </div>
-          </div>
-
-          {/* Technical Side - Right */}
-          <div className="w-full md:w-1/2 bg-black text-white py-12 md:py-16 px-6 md:px-12 flex items-center justify-center relative">
-            <div className="text-center relative z-10 max-w-2xl">
-              <p className="text-green-400 font-mono text-sm mb-4">$ whoami</p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight uppercase mb-3 text-cyan-400 font-mono">
-                Engineer
-              </h1>
-              <p className="text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed font-mono">
-                Machine logic. Systems that scale. Code that turns ideas into growth.
-              </p>
-            </div>
-          </div>
-
-          {/* Center Line */}
-          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-pink-200 via-gray-500 to-white/20"></div>
-        </div>
-
         {/* Split Section with Content from About */}
         <div className="flex flex-col md:flex-row relative">
           {/* Left Side - Black - Marketing */}
