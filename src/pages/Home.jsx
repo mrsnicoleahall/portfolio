@@ -12,6 +12,35 @@ const Home = () => {
 
       <div className="pt-16">
 
+        {/* Definition Section */}
+        <div className="w-full bg-black text-white py-12 px-6 border-b-2 border-white/20">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">Marketing Engineer</h1>
+            <p className="text-sm text-gray-400 italic mb-6">mar·kuh·ting en·juh·neer <span className="text-gray-500">noun</span></p>
+
+            <div className="space-y-4 text-gray-300 text-sm md:text-base leading-relaxed">
+              <p>
+                A hybrid strategist who blends creative insight with technical skill to design, build, and optimize marketing systems that actually work instead of just looking clever in a Canva deck.
+              </p>
+
+              <p>
+                A practitioner who understands code, data, funnels, user behavior, automation, and brand narrative, then stitches them together into a scalable growth engine.
+              </p>
+
+              <p>
+                The person you call when you need someone who can architect the strategy, write the copy, fix the tracking, debug the CMS, rebuild the website, launch the ads, interpret the analytics, and explain it all without condescending or panicking.
+              </p>
+
+              <div className="pt-4 border-t border-white/20 mt-6">
+                <p className="text-gray-400 italic">
+                  <span className="text-cyan-400 font-semibold">Usage:</span><br/>
+                  "Instead of hiring five specialists who don't talk to each other, we hired a Marketing Engineer."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Hero Section - Split Design */}
         <div className="flex flex-col md:flex-row relative border-b-2 border-white/20">
           {/* Creative Side - Left */}
@@ -119,37 +148,37 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Right Side - White - Engineer */}
-          <div className="w-full md:w-1/2 bg-white text-black p-8 md:p-16 flex items-center justify-center">
+          {/* Right Side - Dark - Engineer */}
+          <div className="w-full md:w-1/2 bg-black text-white p-8 md:p-16 flex items-center justify-center">
             <div className="max-w-xl">
-              <p className="text-purple-600 font-mono text-sm mb-2">$ ls -la engineer/</p>
-              <h2 className="text-3xl md:text-4xl font-black uppercase mb-8 font-mono text-purple-600">./ENGINEER</h2>
+              <p className="text-green-400 font-mono text-sm mb-2">$ ls -la engineer/</p>
+              <h2 className="text-3xl md:text-4xl font-black uppercase mb-8 font-mono text-cyan-400">./ENGINEER</h2>
 
               <div className="space-y-8 md:space-y-12">
                 <div>
-                  <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4">Full-Stack Development</h3>
-                  <p className="text-gray-700 leading-relaxed">
+                  <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4 text-cyan-400 font-mono">Full-Stack Development</h3>
+                  <p className="text-gray-300 leading-relaxed font-mono text-sm">
                     Building production-ready web applications with React, Vite, and modern JavaScript. Clean, maintainable code that scales.
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4">Data & Analytics</h3>
-                  <p className="text-gray-700 leading-relaxed">
+                  <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4 text-cyan-400 font-mono">Data & Analytics</h3>
+                  <p className="text-gray-300 leading-relaxed font-mono text-sm">
                     Setting up tracking architectures that capture meaningful data. Building dashboards that answer business questions.
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4">Automation & CI/CD</h3>
-                  <p className="text-gray-700 leading-relaxed">
+                  <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4 text-cyan-400 font-mono">Automation & CI/CD</h3>
+                  <p className="text-gray-300 leading-relaxed font-mono text-sm">
                     Writing scripts to automate repetitive tasks. Building pipelines for quality assurance. Removing human error from critical processes.
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4">Systems Architecture</h3>
-                  <p className="text-gray-700 leading-relaxed">
+                  <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4 text-cyan-400 font-mono">Systems Architecture</h3>
+                  <p className="text-gray-300 leading-relaxed font-mono text-sm">
                     Designing systems that connect marketing tools, CRMs, and data warehouses. Building scalable infrastructure that handles growth.
                   </p>
                 </div>

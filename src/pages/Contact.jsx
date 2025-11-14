@@ -252,30 +252,6 @@ const Contact = () => {
                     <p className="text-sm text-gray-400 font-mono">Raleigh, NC</p>
                   </div>
                 </div>
-
-                <a
-                  href="/resume/Nicole_Hall_Nice_Resume.pdf"
-                  download="Nicole_Hall_Resume.pdf"
-                  className="w-full flex items-center gap-4 p-5 border-2 border-white/20 bg-black hover:bg-white/5 transition-colors"
-                >
-                  <div className="text-2xl text-purple-400">↓</div>
-                  <div className="text-left">
-                    <p className="font-semibold text-white font-mono">Resume (Designed)</p>
-                    <p className="text-sm text-gray-400 font-mono">Download pretty version</p>
-                  </div>
-                </a>
-
-                <a
-                  href="/resume/Nicole_Hall_ATS_Resume.pdf"
-                  download="Nicole_Hall_ATS_Resume.pdf"
-                  className="w-full flex items-center gap-4 p-5 border-2 border-white/20 bg-black hover:bg-white/5 transition-colors"
-                >
-                  <div className="text-2xl text-purple-400">↓</div>
-                  <div className="text-left">
-                    <p className="font-semibold text-white font-mono">Resume (ATS)</p>
-                    <p className="text-sm text-gray-400 font-mono">Download ATS-friendly version</p>
-                  </div>
-                </a>
               </div>
             </div>
           </div>

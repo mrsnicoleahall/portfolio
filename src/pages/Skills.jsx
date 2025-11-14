@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet';
 import { useState } from 'react';
 import ProofCard from '@/components/ProofCard';
 import TerminalWindow from '@/components/TerminalWindow';
+import NicoleChatbot from '@/components/NicoleChatbot';
 import caseStudiesData from '@/data/case-studies.json';
 
 const Skills = () => {
@@ -154,7 +155,7 @@ const Skills = () => {
           </div>
         </div>
 
-        {/* Skills Section */}
+        {/* Skills Section - What Can Nicole Do Chatbot */}
         <div id="skills" className="border-t-2 border-white/20 scroll-mt-32 relative bg-gradient-to-br from-pink-50 via-purple-50 to-orange-50 overflow-hidden">
           {/* Creative Background Pattern */}
           <div className="absolute inset-0 opacity-20 pointer-events-none">
@@ -173,57 +174,18 @@ const Skills = () => {
             </svg>
           </div>
 
-          <div className="max-w-7xl mx-auto p-8 md:p-16 relative z-10">
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-pink-600 via-purple-600 to-orange-600">
-                Skills Matrix
+          <div className="max-w-5xl mx-auto p-8 md:p-16 relative z-10">
+            <div className="text-center mb-8">
+              <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-pink-600 via-purple-600 to-orange-600 mb-4">
+                What Can Nicole Do?
               </h1>
+              <p className="text-lg text-gray-700 mb-8">
+                Ask the chatbot about Nicole's skills, experience, and expertise in marketing and engineering.
+              </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-12">
-              {/* Marketing Skills */}
-              <div>
-                <div className="mb-6">
-                  <h2 className="text-3xl font-black uppercase text-pink-700 mb-2">Marketing</h2>
-                  <div className="h-1 w-20 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full"></div>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {marketingSkills.map((skill, idx) => (
-                    <div
-                      key={idx}
-                      className="text-sm font-semibold text-gray-900 bg-white/60 backdrop-blur-sm p-3 relative group cursor-help border-2 border-pink-200 hover:border-pink-400 hover:shadow-lg transition-all rounded-lg"
-                    >
-                      {skill.name}
-                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-4 py-3 bg-white text-slate-900 text-xs font-normal leading-relaxed w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10 shadow-xl rounded-lg border-2 border-pink-300">
-                        {skill.description}
-                        <div className="absolute top-full left-1/2 transform -translate-x-1/2 -mt-1 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-pink-300"></div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Engineering Skills */}
-              <div>
-                <div className="mb-6">
-                  <h2 className="text-3xl font-black uppercase text-purple-700 mb-2">Engineer</h2>
-                  <div className="h-1 w-20 bg-gradient-to-r from-purple-400 to-orange-400 rounded-full"></div>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {engineeringSkills.map((skill, idx) => (
-                    <div
-                      key={idx}
-                      className="text-sm font-semibold text-gray-900 bg-white/60 backdrop-blur-sm p-3 relative group cursor-help border-2 border-purple-200 hover:border-purple-400 hover:shadow-lg transition-all rounded-lg"
-                    >
-                      {skill.name}
-                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-4 py-3 bg-white text-slate-900 text-xs font-normal leading-relaxed w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10 shadow-xl rounded-lg border-2 border-purple-300">
-                        {skill.description}
-                        <div className="absolute top-full left-1/2 transform -translate-x-1/2 -mt-1 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-purple-300"></div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+            <div className="flex justify-center items-center min-h-[400px]">
+              <NicoleChatbot />
             </div>
           </div>
         </div>
