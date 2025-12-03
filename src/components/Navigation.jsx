@@ -31,6 +31,14 @@ const Navigation = () => {
                 {link.label}
               </Link>
             ))}
+            <a
+              href="https://medium.com/@mrsnicoleahall"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs md:text-sm font-semibold uppercase tracking-wide text-gray-500 hover:text-black"
+            >
+              Blog
+            </a>
           </div>
         </div>
       </div>

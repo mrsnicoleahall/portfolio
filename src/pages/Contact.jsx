@@ -245,6 +245,19 @@ const Contact = () => {
                   </div>
                 </a>
 
+                <a
+                  href="https://medium.com/@mrsnicoleahall"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 p-5 border-2 border-white/20 bg-black hover:bg-white/5 transition-colors"
+                >
+                  <div className="text-2xl">📝</div>
+                  <div>
+                    <p className="font-semibold text-white font-mono">Blog</p>
+                    <p className="text-sm text-gray-400 font-mono">medium.com/@mrsnicoleahall</p>
+                  </div>
+                </a>
+
                 <div className="flex items-center gap-4 p-5 border-2 border-white/20 bg-black">
                   <div className="text-2xl">📍</div>
                   <div>
