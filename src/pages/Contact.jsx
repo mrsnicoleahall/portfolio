@@ -233,7 +233,7 @@ const Contact = () => {
                 </a>
 
                 <a
-                  href="https://linkedin.com/in/real-strategy"
+                  href="https://linkedin.com/in/marketing-nicole"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-5 border-2 border-white/20 bg-black hover:bg-white/5 transition-colors"
@@ -241,7 +241,7 @@ const Contact = () => {
                   <div className="text-2xl text-white">in</div>
                   <div>
                     <p className="font-semibold text-white font-mono">LinkedIn</p>
-                    <p className="text-sm text-gray-400 font-mono">linkedin.com/in/real-strategy</p>
+                    <p className="text-sm text-gray-400 font-mono">linkedin.com/in/marketing-nicole</p>
                   </div>
                 </a>
 
