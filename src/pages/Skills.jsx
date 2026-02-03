@@ -232,15 +232,55 @@ const Skills = () => {
                       </a>
                     </li>
                     <li className="break-words">
+                      <span className="font-bold text-white font-mono text-sm">Strategic Marketing Pitch Deck:</span>{' '}
+                      <a href="https://drive.google.com/file/d/1Sc9TXDro75YD48HGL4c4YKUR1GbcuXon/view" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs break-all">
+                        https://drive.google.com/file/d/1Sc9TXDro75YD48HGL4c4YKUR1GbcuXon/view
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Case Studies */}
+              <div className="bg-black border-2 border-white/20">
+                <div className="flex items-center gap-3 px-4 py-3 border-b border-white/20">
+                  <div className="flex gap-1.5">
+                    <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                  </div>
+                  <span className="text-xs text-white/60 font-mono">case-studies@examples ~ %</span>
+                </div>
+                <div className="p-6">
+                  <h2 className="text-xl md:text-2xl font-black uppercase mb-4 text-pink-400 font-mono">
+                    $ cat case_studies.txt
+                  </h2>
+                  <p className="text-gray-300 mb-6 leading-relaxed text-sm">
+                    In-depth case studies showcasing research, strategy, execution, and measurable results across product marketing, performance marketing, and demand generation.
+                  </p>
+                  <ul className="space-y-3">
+                    <li className="break-words">
                       <span className="font-bold text-white font-mono text-sm">Campaign Case Study (from ideation to execution):</span>{' '}
                       <a href="https://nicole-ems-case-study.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs break-all">
                         https://nicole-ems-case-study.netlify.app/
                       </a>
                     </li>
                     <li className="break-words">
-                      <span className="font-bold text-white font-mono text-sm">Strategic Marketing Pitch Deck:</span>{' '}
-                      <a href="https://drive.google.com/file/d/1Sc9TXDro75YD48HGL4c4YKUR1GbcuXon/view" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs break-all">
-                        https://drive.google.com/file/d/1Sc9TXDro75YD48HGL4c4YKUR1GbcuXon/view
+                      <span className="font-bold text-white font-mono text-sm">Product Marketing GTM Case Study:</span>{' '}
+                      <a href="#proof" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs">
+                        View "Customer research to launch: GTM that drove 840 activations" in Proof section
+                      </a>
+                    </li>
+                    <li className="break-words">
+                      <span className="font-bold text-white font-mono text-sm">Performance Marketing Case Study:</span>{' '}
+                      <a href="#proof" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs">
+                        View "Scaled paid acquisition from $12k to $85k/month profitably" in Proof section
+                      </a>
+                    </li>
+                    <li className="break-words">
+                      <span className="font-bold text-white font-mono text-sm">Demand Gen Case Study:</span>{' '}
+                      <a href="#proof" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs">
+                        View "Built demand gen engine: $2.4M pipeline from zero" in Proof section
                       </a>
                     </li>
                   </ul>
