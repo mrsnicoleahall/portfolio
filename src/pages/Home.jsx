@@ -55,6 +55,65 @@ const Home = () => {
           </div>
         </div>
 
+        {/* Examples Section */}
+        <div className="w-full bg-white border-b-2 border-white/20 py-12 px-8">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-black uppercase mb-8 text-center text-gray-900">
+              Examples
+            </h2>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              {/* Product Marketing Case Study */}
+              <a href="/case-studies/product-marketing" className="group bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg shadow-sm border-2 border-purple-200 hover:border-purple-400 transition-all hover:shadow-lg p-6">
+                <div className="inline-block px-3 py-1 bg-purple-600 text-white rounded-full text-xs font-bold mb-3">
+                  Product Marketing
+                </div>
+                <h3 className="text-lg font-bold mb-2 text-gray-900 group-hover:text-purple-600 transition-colors">
+                  GTM: 840 Activations in 30 Days
+                </h3>
+                <p className="text-sm text-gray-700 mb-3 leading-relaxed">
+                  Customer research → strategic positioning → comprehensive launch assets
+                </p>
+                <div className="text-purple-600 font-semibold text-sm group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                  View Case Study →
+                </div>
+              </a>
+
+              {/* Performance Marketing Case Study */}
+              <a href="/case-studies/performance-marketing" className="group bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg shadow-sm border-2 border-blue-200 hover:border-blue-400 transition-all hover:shadow-lg p-6">
+                <div className="inline-block px-3 py-1 bg-blue-600 text-white rounded-full text-xs font-bold mb-3">
+                  Performance Marketing
+                </div>
+                <h3 className="text-lg font-bold mb-2 text-gray-900 group-hover:text-blue-600 transition-colors">
+                  Scaled $12k → $85k Monthly at 4.2x ROAS
+                </h3>
+                <p className="text-sm text-gray-700 mb-3 leading-relaxed">
+                  Creative testing + attribution fix + automation = profitable scale
+                </p>
+                <div className="text-blue-600 font-semibold text-sm group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                  View Case Study →
+                </div>
+              </a>
+
+              {/* Demand Gen Case Study */}
+              <a href="/case-studies/demand-gen" className="group bg-gradient-to-br from-emerald-50 to-teal-50 rounded-lg shadow-sm border-2 border-emerald-200 hover:border-emerald-400 transition-all hover:shadow-lg p-6">
+                <div className="inline-block px-3 py-1 bg-emerald-600 text-white rounded-full text-xs font-bold mb-3">
+                  Demand Generation
+                </div>
+                <h3 className="text-lg font-bold mb-2 text-gray-900 group-hover:text-emerald-600 transition-colors">
+                  $2.4M Pipeline from Zero
+                </h3>
+                <p className="text-sm text-gray-700 mb-3 leading-relaxed">
+                  Content + paid + webinars + automation = qualified pipeline engine
+                </p>
+                <div className="text-emerald-600 font-semibold text-sm group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                  View Case Study →
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
         {/* Marketing/Engineer Labels - Split Design */}
         <div className="w-full flex flex-col md:flex-row border-b-2 border-white/20">
           {/* Left Side - Marketing (Creative) */}
