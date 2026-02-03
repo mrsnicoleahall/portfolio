@@ -267,20 +267,20 @@ const Skills = () => {
                     </li>
                     <li className="break-words">
                       <span className="font-bold text-white font-mono text-sm">Product Marketing GTM Case Study:</span>{' '}
-                      <a href="#proof" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs">
-                        View "Customer research to launch: GTM that drove 840 activations" in Proof section
+                      <a href="/case-studies/product-marketing" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs">
+                        Customer research to launch: GTM that drove 840 activations →
                       </a>
                     </li>
                     <li className="break-words">
                       <span className="font-bold text-white font-mono text-sm">Performance Marketing Case Study:</span>{' '}
-                      <a href="#proof" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs">
-                        View "Scaled paid acquisition from $12k to $85k/month profitably" in Proof section
+                      <a href="/case-studies/performance-marketing" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs">
+                        Scaled paid acquisition from $12k to $85k/month profitably →
                       </a>
                     </li>
                     <li className="break-words">
                       <span className="font-bold text-white font-mono text-sm">Demand Gen Case Study:</span>{' '}
-                      <a href="#proof" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs">
-                        View "Built demand gen engine: $2.4M pipeline from zero" in Proof section
+                      <a href="/case-studies/demand-gen" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs">
+                        Built demand gen engine: $2.4M pipeline from zero →
                       </a>
                     </li>
                   </ul>
