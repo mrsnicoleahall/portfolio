@@ -189,5 +189,35 @@
     "technical": "Set up product analytics to track feature adoption, coordinated email sequences in marketing automation, created in-app tooltips and modals.",
     "results": [ "1,200 signups in first 2 weeks", "45% of target audience activated feature within 30 days", "92% positive sentiment in user feedback" ],
     "receipts": ["Campaign timeline", "adoption metrics", "user feedback summary"]
+  },
+  {
+    "slug": "product-marketing-gtm",
+    "title": "Customer research to launch: GTM that drove 840 activations",
+    "type": "Hybrid",
+    "context": "B2B SaaS [Company Redacted] built a new analytics feature but didn't know if it solved real problems or how to position it.",
+    "creative": "Conducted 28 user interviews uncovering 3 critical pain points, synthesized feedback into product requirements that shaped the final feature set, developed GTM strategy with Product team, created comprehensive launch assets: dedicated landing page, 12-page sales playbook, product brochure, 8-slide social carousel series, and in-app messaging.",
+    "technical": "Implemented event tracking for feature adoption metrics, set up A/B test for landing page variants, built automated email nurture sequence in HubSpot targeting ICP segments identified in research.",
+    "results": [ "840 feature activations in first 30 days (68% of target users)", "Landing page converted at 14.2% (vs 6% site average)", "Sales team closed 19 deals citing new playbook within 60 days", "Product team implemented 5 of 7 research-backed roadmap suggestions" ],
+    "receipts": ["User interview synthesis doc", "GTM timeline", "HubSpot activation funnel", "sales enablement deck"]
+  },
+  {
+    "slug": "performance-marketing-scale",
+    "title": "Scaled paid acquisition from $12k to $85k/month profitably",
+    "type": "Hybrid",
+    "context": "[Company Redacted] e-commerce brand needed to scale beyond plateaued organic growth while maintaining profitability.",
+    "creative": "Developed creative testing framework with 42 ad variations across 6 value propositions, wrote performance-focused copy highlighting specific customer outcomes, designed video ads featuring real customer stories, built modular landing page system with 8 variants for different audience segments.",
+    "technical": "Migrated tracking to server-side Google Tag Manager for iOS14+ accuracy, built custom attribution dashboard in Looker connecting Meta, Google Ads, and Shopify, implemented automated bid rules based on 7-day ROAS thresholds, created Slack alerts for anomaly detection on key metrics.",
+    "results": [ "Ad spend scaled from $12k to $85k monthly", "Blended ROAS maintained at 4.2x throughout scale", "Customer acquisition cost decreased 31% ($67 to $46)", "Attribution accuracy improved from 68% to 94%" ],
+    "receipts": ["Meta Ads Manager MoM comparison", "Looker ROAS dashboard", "Shopify revenue attribution", "creative testing log"]
+  },
+  {
+    "slug": "demand-gen-pipeline",
+    "title": "Built demand gen engine: $2.4M pipeline from zero",
+    "type": "Hybrid",
+    "context": "[Company Redacted] mid-market B2B company relied solely on outbound sales, needed inbound demand generation system.",
+    "creative": "Developed integrated demand gen strategy across content, paid social, webinars, and email, created 'Ultimate Guide' lead magnet with 47-page downloadable asset, wrote and designed 6-part email nurture sequence, planned and executed quarterly webinar series with industry experts, developed account-based marketing playbook for target accounts.",
+    "technical": "Built lead scoring model in Salesforce weighing 12 engagement signals, integrated Marketo with Salesforce for bi-directional sync, set up UTM tracking taxonomy and campaign attribution, created automated workflows routing MQLs to appropriate sales reps based on company size and industry, implemented Clearbit enrichment for lead data quality.",
+    "results": [ "$2.4M in qualified pipeline generated over 6 months", "487 marketing qualified leads (MQL) at $43 cost per MQL", "Lead-to-opportunity conversion rate of 28%", "72 opportunities created, 19 closed-won deals worth $680k" ],
+    "receipts": ["Salesforce pipeline report", "Marketo campaign performance", "webinar attendance and conversion data", "lead scoring model documentation"]
   }
 ]
