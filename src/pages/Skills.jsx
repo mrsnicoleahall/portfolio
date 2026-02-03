@@ -363,11 +363,20 @@ const Skills = () => {
                         https://xd.adobe.com/view/688f8407-8edb-48a6-8206-5d9040dd6e7c-3ddc/?hints=off
                       </a>
                     </li>
+                    <li className="break-words">
+                      <span className="font-bold text-white font-mono text-sm">Marketing Assets Example:</span>{' '}
+                      <a href="https://marketingassets.hallghosts.com/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs break-all">
+                        https://marketingassets.hallghosts.com/
+                      </a>
+                    </li>
                   </ul>
                   <h3 className="text-lg md:text-xl font-black uppercase mb-4 text-orange-400 font-mono">
                     $ cat site_examples.txt
                   </h3>
                   <div className="flex flex-wrap gap-4">
+                    <a href="https://ng.hallghosts.com/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs break-all">
+                      ng.hallghosts.com
+                    </a>
                     <a href="https://wtfareu.com" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs break-all">
                       wtfareu.com
                     </a>
