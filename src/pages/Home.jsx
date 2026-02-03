@@ -55,11 +55,11 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Examples Section */}
+        {/* Case Studies Section */}
         <div className="w-full bg-white border-b-2 border-white/20 py-12 px-8">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-black uppercase mb-8 text-center text-gray-900">
-              Examples
+              Case Studies
             </h2>
 
             <div className="grid md:grid-cols-3 gap-6">
@@ -115,7 +115,7 @@ const Home = () => {
         </div>
 
         {/* Marketing/Engineer Labels - Split Design */}
-        <div className="w-full flex flex-col md:flex-row border-b-2 border-white/20">
+        <div className="w-full flex flex-col md:flex-row border-b-2 border-white/20 relative">
           {/* Left Side - Marketing (Creative) */}
           <div className="w-full md:w-1/2 bg-gradient-to-br from-pink-50 via-purple-50 to-orange-50 py-12 px-6 md:px-8 border-r-2 border-pink-200 relative overflow-hidden">
             {/* Creative Background Pattern */}
