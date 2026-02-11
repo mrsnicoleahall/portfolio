@@ -260,6 +260,12 @@ const Skills = () => {
                   </p>
                   <ul className="space-y-3">
                     <li className="break-words">
+                      <span className="font-bold text-white font-mono text-sm">SaaS Landing Page (advertising + storytelling + interactive design):</span>{' '}
+                      <a href="https://saaslp.hallghosts.com" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs break-all">
+                        https://saaslp.hallghosts.com
+                      </a>
+                    </li>
+                    <li className="break-words">
                       <span className="font-bold text-white font-mono text-sm">Campaign Case Study (from ideation to execution):</span>{' '}
                       <a href="https://nicole-ems-case-study.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs break-all">
                         https://nicole-ems-case-study.netlify.app/
@@ -374,6 +380,9 @@ const Skills = () => {
                     $ cat site_examples.txt
                   </h3>
                   <div className="flex flex-wrap gap-4">
+                    <a href="https://saaslp.hallghosts.com" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs break-all">
+                      saaslp.hallghosts.com
+                    </a>
                     <a href="https://ng.hallghosts.com/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300 font-mono text-xs break-all">
                       ng.hallghosts.com
                     </a>

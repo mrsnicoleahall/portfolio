@@ -211,6 +211,16 @@
     "receipts": ["Meta Ads Manager MoM comparison", "Looker ROAS dashboard", "Shopify revenue attribution", "creative testing log"]
   },
   {
+    "slug": "saas-landing-page",
+    "title": "SaaS landing page that sells through story, not slides",
+    "type": "Hybrid",
+    "context": "SaaS product needed a landing page that combined advertising persuasion with immersive storytelling and interactive design.",
+    "creative": "Wrote narrative-driven copy that walks visitors through the product story instead of listing features, designed scroll-based interactions that reveal value progressively, built the page as an advertising experience rather than a brochure.",
+    "technical": "Built with modern front-end stack featuring scroll-triggered animations, responsive interactive elements, and performance-optimized assets. Designed for conversion with intentional pacing and visual hierarchy.",
+    "results": [ "Live example of advertising + storytelling + interactive design + technical execution in one artifact" ],
+    "receipts": ["Live site: saaslp.hallghosts.com"]
+  },
+  {
     "slug": "demand-gen-pipeline",
     "title": "Built demand gen engine: $2.4M pipeline from zero",
     "type": "Hybrid",
