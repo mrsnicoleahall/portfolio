@@ -123,22 +123,18 @@ const Home = () => {
               <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <filter id="watercolor-labels">
-                    <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="4" result="noise">
-                      <animate attributeName="baseFrequency" values="0.02;0.028;0.014;0.024;0.02" dur="40s" repeatCount="indefinite" />
-                    </feTurbulence>
-                    <feDisplacementMap in="SourceGraphic" in2="noise" scale="10">
-                      <animate attributeName="scale" values="10;16;7;13;10" dur="35s" repeatCount="indefinite" />
-                    </feDisplacementMap>
+                    <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="4" result="noise"/>
+                    <feDisplacementMap in="SourceGraphic" in2="noise" scale="10" />
                   </filter>
                 </defs>
-                <ellipse cx="30%" cy="50%" rx="100" ry="80" fill="#ec4899" opacity="0.3" filter="url(#watercolor-labels)">
-                  <animate attributeName="rx" values="100;118;90;110;100" dur="23s" repeatCount="indefinite" />
-                  <animate attributeName="ry" values="80;70;92;78;80" dur="29s" repeatCount="indefinite" />
-                </ellipse>
-                <ellipse cx="70%" cy="40%" rx="80" ry="95" fill="#a855f7" opacity="0.25" filter="url(#watercolor-labels)">
-                  <animate attributeName="rx" values="80;92;74;86;80" dur="26s" repeatCount="indefinite" />
-                  <animate attributeName="ry" values="95;85;108;90;95" dur="21s" repeatCount="indefinite" />
-                </ellipse>
+                <circle cx="25%" cy="40%" r="90" fill="#ec4899" opacity="0.3" filter="url(#watercolor-labels)">
+                  <animate attributeName="cx" values="25%;32%;20%;28%;25%" dur="28s" repeatCount="indefinite" />
+                  <animate attributeName="cy" values="40%;52%;35%;48%;40%" dur="34s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="72%" cy="55%" r="75" fill="#a855f7" opacity="0.25" filter="url(#watercolor-labels)">
+                  <animate attributeName="cx" values="72%;65%;78%;68%;72%" dur="32s" repeatCount="indefinite" />
+                  <animate attributeName="cy" values="55%;42%;60%;48%;55%" dur="26s" repeatCount="indefinite" />
+                </circle>
               </svg>
             </div>
 
@@ -177,32 +173,21 @@ const Home = () => {
               <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <filter id="watercolor-home">
-                    <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="4" result="noise">
-                      <animate attributeName="baseFrequency" values="0.015;0.022;0.01;0.019;0.015" dur="38s" repeatCount="indefinite" />
-                    </feTurbulence>
-                    <feDisplacementMap in="SourceGraphic" in2="noise" scale="12">
-                      <animate attributeName="scale" values="12;18;8;15;12" dur="32s" repeatCount="indefinite" />
-                    </feDisplacementMap>
+                    <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="4" result="noise"/>
+                    <feDisplacementMap in="SourceGraphic" in2="noise" scale="12" />
                   </filter>
                 </defs>
-                <ellipse cx="15%" cy="25%" rx="120" ry="100" fill="#ec4899" opacity="0.2" filter="url(#watercolor-home)">
-                  <animate attributeName="rx" values="120;138;105;130;120" dur="22s" repeatCount="indefinite" />
-                  <animate attributeName="ry" values="100;88;115;95;100" dur="28s" repeatCount="indefinite" />
-                </ellipse>
-                <ellipse cx="80%" cy="20%" rx="90" ry="110" fill="#a855f7" opacity="0.18" filter="url(#watercolor-home)">
-                  <animate attributeName="rx" values="90;105;82;98;90" dur="26s" repeatCount="indefinite" />
-                  <animate attributeName="ry" values="110;98;122;105;110" dur="19s" repeatCount="indefinite" />
-                </ellipse>
-                <ellipse cx="70%" cy="75%" rx="100" ry="85" fill="#f97316" opacity="0.22" filter="url(#watercolor-home)">
-                  <animate attributeName="rx" values="100;88;114;96;100" dur="24s" repeatCount="indefinite" />
-                  <animate attributeName="ry" values="85;97;78;90;85" dur="31s" repeatCount="indefinite" />
-                </ellipse>
-                <ellipse cx="25%" cy="80%" rx="80" ry="95" fill="#fbbf24" opacity="0.15" filter="url(#watercolor-home)">
-                  <animate attributeName="rx" values="80;94;72;86;80" dur="27s" repeatCount="indefinite" />
-                  <animate attributeName="ry" values="95;84;108;92;95" dur="20s" repeatCount="indefinite" />
-                </ellipse>
-                <circle cx="50%" cy="45%" r="70" fill="#ec4899" opacity="0.12" filter="url(#watercolor-home)">
-                  <animate attributeName="r" values="70;82;62;76;70" dur="25s" repeatCount="indefinite" />
+                <circle cx="20%" cy="25%" r="110" fill="#ec4899" opacity="0.2" filter="url(#watercolor-home)">
+                  <animate attributeName="cx" values="20%;28%;15%;25%;20%" dur="30s" repeatCount="indefinite" />
+                  <animate attributeName="cy" values="25%;18%;32%;22%;25%" dur="38s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="75%" cy="70%" r="95" fill="#a855f7" opacity="0.18" filter="url(#watercolor-home)">
+                  <animate attributeName="cx" values="75%;68%;82%;72%;75%" dur="34s" repeatCount="indefinite" />
+                  <animate attributeName="cy" values="70%;78%;62%;74%;70%" dur="27s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="50%" cy="50%" r="80" fill="#f97316" opacity="0.15" filter="url(#watercolor-home)">
+                  <animate attributeName="cx" values="50%;58%;44%;52%;50%" dur="36s" repeatCount="indefinite" />
+                  <animate attributeName="cy" values="50%;42%;56%;46%;50%" dur="31s" repeatCount="indefinite" />
                 </circle>
               </svg>
             </div>
@@ -293,28 +278,17 @@ const Home = () => {
               <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <filter id="watercolor-bio">
-                    <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="4" result="noise">
-                      <animate attributeName="baseFrequency" values="0.015;0.023;0.011;0.02;0.015" dur="42s" repeatCount="indefinite" />
-                    </feTurbulence>
-                    <feDisplacementMap in="SourceGraphic" in2="noise" scale="12">
-                      <animate attributeName="scale" values="12;17;9;14;12" dur="36s" repeatCount="indefinite" />
-                    </feDisplacementMap>
+                    <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="4" result="noise"/>
+                    <feDisplacementMap in="SourceGraphic" in2="noise" scale="12" />
                   </filter>
                 </defs>
-                <ellipse cx="15%" cy="25%" rx="100" ry="80" fill="#ec4899" opacity="0.2" filter="url(#watercolor-bio)">
-                  <animate attributeName="rx" values="100;115;88;108;100" dur="24s" repeatCount="indefinite" />
-                  <animate attributeName="ry" values="80;72;94;82;80" dur="30s" repeatCount="indefinite" />
-                </ellipse>
-                <ellipse cx="80%" cy="20%" rx="70" ry="90" fill="#a855f7" opacity="0.18" filter="url(#watercolor-bio)">
-                  <animate attributeName="rx" values="70;82;64;76;70" dur="27s" repeatCount="indefinite" />
-                  <animate attributeName="ry" values="90;80;102;86;90" dur="22s" repeatCount="indefinite" />
-                </ellipse>
-                <ellipse cx="70%" cy="75%" rx="85" ry="70" fill="#f97316" opacity="0.22" filter="url(#watercolor-bio)">
-                  <animate attributeName="rx" values="85;74;98;82;85" dur="21s" repeatCount="indefinite" />
-                  <animate attributeName="ry" values="70;82;64;76;70" dur="28s" repeatCount="indefinite" />
-                </ellipse>
-                <circle cx="30%" cy="50%" r="60" fill="#fbbf24" opacity="0.15" filter="url(#watercolor-bio)">
-                  <animate attributeName="r" values="60;72;54;66;60" dur="26s" repeatCount="indefinite" />
+                <circle cx="25%" cy="30%" r="90" fill="#ec4899" opacity="0.2" filter="url(#watercolor-bio)">
+                  <animate attributeName="cx" values="25%;18%;30%;22%;25%" dur="32s" repeatCount="indefinite" />
+                  <animate attributeName="cy" values="30%;38%;24%;35%;30%" dur="26s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="70%" cy="65%" r="80" fill="#a855f7" opacity="0.18" filter="url(#watercolor-bio)">
+                  <animate attributeName="cx" values="70%;78%;65%;74%;70%" dur="29s" repeatCount="indefinite" />
+                  <animate attributeName="cy" values="65%;58%;72%;62%;65%" dur="35s" repeatCount="indefinite" />
                 </circle>
               </svg>
             </div>
